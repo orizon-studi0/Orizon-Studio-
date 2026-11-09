@@ -6,11 +6,11 @@
   
   <!-- SEO Essencial -->
   <title>Orizon Studio | Sites Profissionais para Clínicas e Negócios Locais</title>
-  <meta name="description" content="A Orizon Studio cria sites profissionais, modernos e de alta conversão para clínicas estéticas, odontológicas e negócios locais. Pagamento único, sem mensalidades." />
-  <meta name="keywords" content="criação de sites, site para clínica estética, site para dentista, site para clínica médica, criação de landing page, Orizon Studio, web design profissional" />
+  <meta name="description" content="A Orizon Studio cria sites profissionais, modernos e de alta conversão para clínicas, cuidados pessoais e profissionais liberais. Pagamento único, sem mensalidades." />
+  <meta name="keywords" content="criação de sites, site para clínica estética, site para dentista, site para médico, site para barbearia, site para advogados, Orizon Studio, web design profissional" />
   <meta name="author" content="Orizon Studio" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://orizonstudio.com.br" />
+  <link rel="canonical" id="canonicalTag" href="https://ais-dev-tarkkzv5hy2hnqcxmhn4go-870490963763.us-east1.run.app" />
   <meta name="theme-color" content="#070a12" />
 
   <!-- Open Graph / Redes Sociais -->
@@ -24,7 +24,7 @@
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Orizon Studio | Sites Profissionais para Clínicas e Negócios Locais" />
-  <meta name="twitter:description" content="Criação de sites modernos e elegantes para clínicas e negócios locais. Conquiste autoridade digital e aumente seus agendamentos." />
+  <meta name="twitter:description" content="Criação de sites modernos e elegantes para clínicas, cuidados pessoais e profissionais liberais. Conquiste autoridade digital e aumente seus agendamentos." />
   <meta name="twitter:image" content="imagens/logo.png" />
 
   <!-- Schema.org ProfessionalService -->
@@ -33,9 +33,9 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Orizon Studio",
-    "image": "https://orizonstudio.com.br/imagens/logo.png",
-    "description": "Agência especializada na criação de sites profissionais e de alta conversão para clínicas estéticas, odontológicas, de saúde e negócios locais no Brasil.",
-    "url": "https://orizonstudio.com.br",
+    "image": "imagens/logo.png",
+    "description": "Agência especializada na criação de sites profissionais e de alta conversão para clínicas, cuidados pessoais e profissionais liberais no Brasil.",
+    "url": "https://ais-dev-tarkkzv5hy2hnqcxmhn4go-870490963763.us-east1.run.app",
     "telephone": "",
     "priceRange": "R$ 600 - R$ 1200",
     "paymentAccepted": "Pix, Transferência, Boleto",
@@ -934,191 +934,29 @@
       flex-shrink: 0;
     }
 
-    /* ==========================================================================
-       SEÇÃO PORTFÓLIO (PROJETOS ANTERIORES)
-       ========================================================================== */
-    .portfolio-section {
-      background: linear-gradient(180deg, transparent 0%, rgba(11, 16, 28, 0.6) 50%, transparent 100%);
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-
-    .portfolio-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .portfolio-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-glow-strong);
-    }
-
-    .portfolio-card.is-visible:hover {
-      transform: translateY(-6px);
-    }
-
-    .portfolio-browser-header {
-      background: #090d16;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .browser-dots {
-      display: flex;
-      gap: 5px;
-    }
-
-    .browser-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-    .browser-dot.red { background: #ef4444; opacity: 0.8; }
-    .browser-dot.yellow { background: #f59e0b; opacity: 0.8; }
-    .browser-dot.green { background: #10b981; opacity: 0.8; }
-
-    .browser-url-bar {
-      flex: 1;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 6px;
-      padding: 3px 10px;
-      font-size: 0.72rem;
-      color: var(--text-subtle);
-      font-family: monospace;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .browser-status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 8px #10b981;
-    }
-
-    .portfolio-thumb-container {
-      position: relative;
-      width: 100%;
-      height: 220px;
-      background: #0a0d15;
-      overflow: hidden;
-    }
-
-    .portfolio-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .portfolio-card:hover .portfolio-img {
-      transform: scale(1.04);
-    }
-
-    .portfolio-fallback {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #091224 0%, #0d1b38 50%, #112654 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid rgba(59, 130, 246, 0.25);
-    }
-
-    .portfolio-body {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
-    }
-
-    .portfolio-tags-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .portfolio-tag {
+    .model-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(10, 15, 26, 0.88);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #93c5fd;
       font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      padding: 3px 10px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 5px 12px;
       border-radius: 9999px;
+      z-index: 5;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
-    .portfolio-title {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-    }
-
-    .portfolio-desc {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-      margin-bottom: 20px;
-    }
-
-    .portfolio-meta-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 22px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .portfolio-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.83rem;
-      color: #cbd5e1;
-    }
-
-    .portfolio-meta-item svg {
-      color: #38bdf8;
-      flex-shrink: 0;
-    }
-
-    .portfolio-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      text-decoration: none;
-      cursor: pointer;
+    /* O botão Ver modelo fica oculto quando não houver link configurado (href="") */
+    .model-btn:not([href]),
+    .model-btn[href=""],
+    .model-btn[href="#"] {
+      display: none !important;
     }
 
     /* ==========================================================================
@@ -1542,124 +1380,69 @@
     }
 
     /* ==========================================================================
-       BOTÃO FLUTUANTE DE WHATSAPP
+       BOTÃO FLUTUANTE DE WHATSAPP (56px, Círculo, Pulso Contínuo)
        ========================================================================== */
     .floating-whatsapp {
       position: fixed;
       bottom: 24px;
       right: 24px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
       background: #25d366;
       color: #ffffff;
-      padding: 14px 20px;
-      border-radius: 9999px;
-      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      z-index: 9999;
       cursor: pointer;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      padding: 0;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
     }
 
     .floating-whatsapp:hover {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+      transform: scale(1.08);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.65);
       color: #ffffff;
     }
 
-    .whatsapp-badge-pulse {
-      position: absolute;
-      top: -3px;
-      right: -3px;
-      width: 14px;
-      height: 14px;
-      background: #00d2ff;
-      border: 2px solid #07090e;
-      border-radius: 50%;
-      animation: pulse 1.8s infinite;
+    .floating-whatsapp svg {
+      width: 28px;
+      height: 28px;
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 2;
     }
 
-    /* ==========================================================================
-       MODAIS & NOTIFICAÇÕES (Canal WhatsApp & Modelo Preview)
-       ========================================================================== */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10000;
-      padding: 20px;
-      opacity: 0;
+    .wa-pulse-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid #25d366;
+      animation: waPulseRing 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
       pointer-events: none;
-      transition: opacity 0.25s ease;
     }
 
-    .modal-overlay.open {
-      opacity: 1;
-      pointer-events: auto;
+    @keyframes waPulseRing {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.95;
+      }
+      70%, 100% {
+        transform: scale(1.65);
+        opacity: 0;
+      }
     }
 
-    .modal-box {
-      background: #0f1422;
-      border: 1px solid rgba(59, 130, 246, 0.35);
-      border-radius: var(--radius-xl);
-      max-width: 520px;
-      width: 100%;
-      padding: 36px 30px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-      position: relative;
-      transform: scale(0.95);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .modal-overlay.open .modal-box {
-      transform: scale(1);
-    }
-
-    .modal-close-btn {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border-subtle);
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .modal-close-btn:hover {
-      color: #fff;
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    .modal-icon-wrap {
-      width: 60px;
-      height: 60px;
-      border-radius: 18px;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid rgba(59, 130, 246, 0.35);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #38bdf8;
-      margin-bottom: 20px;
-      box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
+    @media (prefers-reduced-motion: reduce) {
+      .wa-pulse-ring {
+        animation: none !important;
+        display: none !important;
+      }
     }
 
     /* Helper ocultar/mostrar */
@@ -1668,23 +1451,124 @@
     }
 
     /* ==========================================================================
-       MEDIA QUERIES (DESKTOP E TABLET)
+       REGRAS EXCLUSIVAS PARA CELULAR (Telas até 768px)
        ========================================================================== */
-    @media (min-width: 640px) {
+    @media (max-width: 768px) {
+      /* Redução geral no celular: h1 até 30px, h2 até 24px, h3 até 18px */
+      h1, .hero-title {
+        font-size: clamp(1.55rem, 6.5vw, 1.875rem) !important; /* máx 30px */
+        line-height: 1.15 !important;
+      }
+
+      h2, .section-title, .final-title {
+        font-size: clamp(1.25rem, 5vw, 1.5rem) !important; /* máx 24px */
+        line-height: 1.25 !important;
+      }
+
+      h3, .problem-title, .service-title, .model-name, .step-title {
+        font-size: 1.125rem !important; /* 18px */
+        line-height: 1.35 !important;
+      }
+
+      /* Textos gerais no celular: 15px */
+      body, p, .section-desc, .hero-subtitle, .problem-text, .service-text, .model-desc, .step-desc, .final-subtitle, .pricing-explanation, .faq-answer {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+      }
+
+      /* Espaçamento vertical entre seções: cerca de 48px */
+      section {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+      }
+
+      .hero {
+        padding-top: 105px !important;
+        padding-bottom: 48px !important;
+      }
+
+      .section-header {
+        margin-bottom: 28px !important;
+      }
+
+      /* Cards mais compactos e sem vazamento */
+      .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        overflow-x: hidden;
+      }
+
+      .card, .problem-card, .service-card, .model-card, .step-card, .pricing-card, .contact-card {
+        padding: 20px 18px !important;
+      }
+
+      /* CARROSSEL NO CELULAR (O Risco do Improviso, Soluções da Orizon, Modelos de Sites) */
+      .mobile-carousel {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 16px !important;
+        padding: 8px 16px 16px 16px !important;
+        margin-left: -16px !important;
+        margin-right: -16px !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        scroll-behavior: smooth;
+      }
+
+      .mobile-carousel::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      /* Um card quase inteiro por vez (85%), mostrando um pedaço do próximo para indicar arrasto */
+      .mobile-carousel > * {
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+        min-width: 85% !important;
+        scroll-snap-align: center !important;
+        scroll-snap-stop: always !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Bolinhas indicadoras embaixo no celular */
+      .carousel-dots {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-top: 18px !important;
+        width: 100% !important;
+      }
+
+      .carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.25);
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .carousel-dot.active {
+        width: 24px;
+        border-radius: 9999px;
+        background: #3b82f6;
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+      }
+    }
+
+    /* ==========================================================================
+       MEDIA QUERIES TABLET INTERMEDIÁRIO (640px a 768px)
+       ========================================================================== */
+    @media (min-width: 640px) and (max-width: 768px) {
       .hero-cta-group {
         flex-direction: row;
-      }
-      .problem-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .models-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
       }
       .steps-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1695,27 +1579,53 @@
       }
     }
 
-    @media (min-width: 992px) {
+    /* ==========================================================================
+       COMPUTADOR (Acima de 768px): MANTÉM AS GRADES E SEM CARROSSEL / SEM BOLINHAS
+       ========================================================================== */
+    @media (min-width: 769px) {
       .nav-links {
         display: flex;
       }
       .nav-toggle {
         display: none;
       }
+      .hero-cta-group {
+        flex-direction: row;
+      }
+      /* Grades restauradas no computador */
       .problem-grid {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+        overflow-x: visible !important;
       }
       .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+        overflow-x: visible !important;
       }
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .models-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+        overflow-x: visible !important;
       }
       .steps-grid {
-        grid-template-columns: repeat(4, 1fr);
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 24px !important;
       }
       .footer-grid {
         grid-template-columns: 2fr 1fr 1fr;
+      }
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      /* Sem bolinhas nem carrossel no computador */
+      .carousel-dots {
+        display: none !important;
       }
     }
   </style>
@@ -1752,7 +1662,6 @@
           <li><a href="#problema" class="nav-link">Problema</a></li>
           <li><a href="#servicos" class="nav-link">Serviços</a></li>
           <li><a href="#modelos" class="nav-link">Modelos</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
           <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
           <li><a href="#precos" class="nav-link">Preços</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
@@ -1761,7 +1670,7 @@
 
       <!-- Botão WhatsApp e Toggle Mobile -->
       <div class="nav-actions">
-        <button onclick="handleWhatsAppClick('Olá! Gostaria de conversar sobre um site profissional para o meu negócio.')" class="btn btn-primary btn-sm" aria-label="Falar no WhatsApp">
+        <button onclick="handleWhatsAppClick('Olá! Vim pelo site da Orizon Studio e quero um site para meu negócio.')" class="btn btn-primary btn-sm" aria-label="Falar no WhatsApp">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
           </svg>
@@ -1782,11 +1691,10 @@
     <a href="#problema" class="mobile-nav-link" onclick="closeMobileMenu()">O Problema</a>
     <a href="#servicos" class="mobile-nav-link" onclick="closeMobileMenu()">Nossos Serviços</a>
     <a href="#modelos" class="mobile-nav-link" onclick="closeMobileMenu()">Modelos de Sites</a>
-    <a href="#portfolio" class="mobile-nav-link" onclick="closeMobileMenu()">Portfólio de Projetos</a>
     <a href="#como-funciona" class="mobile-nav-link" onclick="closeMobileMenu()">Como Funciona</a>
     <a href="#precos" class="mobile-nav-link" onclick="closeMobileMenu()">Preços Transparentes</a>
     <a href="#faq" class="mobile-nav-link" onclick="closeMobileMenu()">Dúvidas Frequentes</a>
-    <button onclick="closeMobileMenu(); handleWhatsAppClick('Olá! Gostaria de conversar com a Orizon Studio sobre um novo site.')" class="btn btn-primary btn-block" style="margin-top: 15px;">
+    <button onclick="closeMobileMenu(); handleWhatsAppClick('Olá! Vim pelo site da Orizon Studio e quero um site para meu negócio.')" class="btn btn-primary btn-block" style="margin-top: 15px;">
       Falar no WhatsApp
     </button>
   </div>
@@ -1799,7 +1707,7 @@
       <div class="hero-badge-wrap scale-up">
         <div class="pill-badge">
           <span class="pill-dot"></span>
-          Sites Profissionais para Clínicas e Negócios Locais
+          Sites para Clínicas, Cuidados Pessoais e Profissionais Liberais
         </div>
       </div>
 
@@ -1808,11 +1716,11 @@
       </h1>
 
       <p class="hero-subtitle slide-up delay-200">
-        A Orizon Studio cria sites profissionais que transformam visitantes em pacientes e clientes reais. Design moderno, velocidade e foco em agendamentos no seu WhatsApp.
+        A Orizon Studio cria sites profissionais para clínicas, cuidados pessoais e profissionais liberais que transformam visitantes em pacientes e clientes reais. Design moderno, velocidade e foco em agendamentos no seu WhatsApp.
       </p>
 
       <div class="hero-cta-group slide-up delay-300">
-        <button onclick="handleWhatsAppClick('Olá! Gostaria de criar um site profissional para o meu negócio.')" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.05rem;">
+        <button onclick="handleWhatsAppClick('Olá! Vim pelo site da Orizon Studio e quero um site para meu negócio.')" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.05rem;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
           </svg>
@@ -1867,7 +1775,7 @@
         </p>
       </div>
 
-      <div class="problem-grid">
+      <div class="problem-grid mobile-carousel" id="problemCarousel">
         <!-- Card 1 -->
         <div class="problem-card slide-up delay-100">
           <div class="problem-icon-wrap">
@@ -1914,6 +1822,8 @@
           </p>
         </div>
       </div>
+      <!-- Bolinhas Indicadoras para o Celular -->
+      <div class="carousel-dots" id="problemDots"></div>
     </div>
   </section>
 
@@ -1930,7 +1840,7 @@
         </p>
       </div>
 
-      <div class="services-grid">
+      <div class="services-grid mobile-carousel" id="servicesCarousel">
         <!-- Serviço 1 -->
         <div class="service-card slide-up delay-100">
           <div class="service-icon-wrap">
@@ -2014,10 +1924,12 @@
           </div>
           <h3 class="service-title">Design Mobile-First Veloz</h3>
           <p class="service-text">
-            Mais de 85% dos pacientes chegam pelo smartphone. Construímos páginas ultraleves com carregamento em milissegundos.
+            Pensado para quem acessa pelo celular.
           </p>
         </div>
       </div>
+      <!-- Bolinhas Indicadoras para o Celular -->
+      <div class="carousel-dots" id="servicesDots"></div>
     </div>
   </section>
 
@@ -2034,10 +1946,11 @@
         </p>
       </div>
 
-      <div class="models-grid">
+      <div class="models-grid mobile-carousel" id="modelsCarousel">
         <!-- Card 1: Clínica Estética -->
         <div class="model-card slide-up delay-100">
           <div class="model-preview-container">
+            <span class="model-badge">Modelo de demonstração</span>
             <img 
               src="imagens/modelo-estetica.jpg" 
               alt="Prévia Modelo Clínica Estética" 
@@ -2074,20 +1987,21 @@
                 </li>
               </ul>
             </div>
-            <button onclick="openModelDetails('Clínica Estética', 'Design sofisticado em tons elegantes, ideal para clínicas de biomedicina, harmonização e dermatologia.')" class="btn btn-secondary btn-block">
+            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
               <span>Ver modelo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- Card 2: Clínica Odontológica -->
         <div class="model-card slide-up delay-200">
           <div class="model-preview-container">
+            <span class="model-badge">Modelo de demonstração</span>
             <img 
               src="imagens/modelo-odonto.jpg" 
               alt="Prévia Modelo Clínica Odontológica" 
@@ -2124,20 +2038,21 @@
                 </li>
               </ul>
             </div>
-            <button onclick="openModelDetails('Clínica Odontológica', 'Layout profissional que inspira segurança, higiene e modernidade para consultórios odontológicos.')" class="btn btn-secondary btn-block">
+            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
               <span>Ver modelo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- Card 3: Barbearia e Salão -->
         <div class="model-card slide-up delay-300">
           <div class="model-preview-container">
+            <span class="model-badge">Modelo de demonstração</span>
             <img 
               src="imagens/modelo-barbearia.jpg" 
               alt="Prévia Modelo Barbearia e Salão" 
@@ -2178,23 +2093,24 @@
                 </li>
               </ul>
             </div>
-            <button onclick="openModelDetails('Barbearia e Salão', 'Estilo arrojado com alta taxa de agendamento para barbearias premium e salões de beleza.')" class="btn btn-secondary btn-block">
+            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
               <span>Ver modelo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
 
-        <!-- Card 4: Advocacia e Saúde Individual -->
+        <!-- Card 4: Site Pessoal para Profissionais -->
         <div class="model-card slide-up delay-400">
           <div class="model-preview-container">
+            <span class="model-badge">Modelo de demonstração</span>
             <img 
               src="imagens/modelo-advocacia.jpg" 
-              alt="Prévia Modelo Advocacia e Saúde Individual" 
+              alt="Prévia Modelo Site Pessoal Profissional" 
               class="model-img" 
               onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" 
             />
@@ -2209,313 +2125,44 @@
                 </svg>
               </div>
               <span class="model-fallback-badge">Prévia Visual</span>
-              <h4 class="model-fallback-name">Advocacia & Saúde Individual</h4>
+              <h4 class="model-fallback-name">Site Pessoal Profissional</h4>
             </div>
           </div>
           <div class="model-body">
             <div>
               <span class="model-segment">Profissionais Liberais</span>
-              <h3 class="model-name">Advocacia e Saúde Individual</h3>
+              <h3 class="model-name">Site pessoal para médicos, advogados e psicólogos</h3>
               <p class="model-desc">
-                Foco total em autoridade técnica, discrição e confiança. Ideal para advogados, psicólogos, nutricionistas e médicos em consultório próprio.
+                Página com a cara do profissional, para quem atende por conta própria e não precisa de um site de clínica inteira.
               </p>
               <ul class="model-features">
                 <li>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Áreas de atuação e especialidades
+                  Apresentação pessoal, formação e especialidades
                 </li>
                 <li>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Formulário direto para triagem de casos
+                  Seção de conteúdo informativo com cara de blog
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Agendamento e contato direto pelo WhatsApp
                 </li>
               </ul>
             </div>
-            <button onclick="openModelDetails('Advocacia e Saúde Individual', 'Sobriedade e máxima elegância para destacar currículo, seriedade e atrair consultas qualificadas.')" class="btn btn-secondary btn-block">
+            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
               <span>Ver modelo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       PORTFÓLIO (PROJETOS ANTERIORES)
-       ======================================================================== -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header slide-up">
-        <div class="pill-badge">Portfólio de Projetos</div>
-        <h2 class="section-title">Sites criados para clínicas e negócios em todo o Brasil</h2>
-        <p class="section-desc">
-          Conheça alguns dos projetos desenvolvidos pela Orizon Studio. Páginas estruturadas para transmitir autoridade e converter visitantes em agendamentos diários.
-        </p>
-      </div>
-
-      <div class="portfolio-grid">
-        <!-- Projeto 1: Lumina Estética -->
-        <div class="portfolio-card slide-up delay-100">
-          <div class="portfolio-browser-header">
-            <div class="browser-dots">
-              <span class="browser-dot red"></span>
-              <span class="browser-dot yellow"></span>
-              <span class="browser-dot green"></span>
-            </div>
-            <div class="browser-url-bar">
-              <span class="browser-status-dot"></span>
-              <span>https://luminaestetica.com.br</span>
-            </div>
-          </div>
-          <div class="portfolio-thumb-container">
-            <img 
-              src="imagens/portfolio-lumina.jpg" 
-              alt="Site Clínica Lumina Estética" 
-              class="portfolio-img" 
-              onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" 
-            />
-            <div class="portfolio-fallback hidden">
-              <div class="model-fallback-glow"></div>
-              <div class="model-fallback-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-              </div>
-              <span class="model-fallback-badge">Projeto Ativo</span>
-              <h4 class="model-fallback-name">Lumina Estética Avançada</h4>
-            </div>
-          </div>
-          <div class="portfolio-body">
-            <div>
-              <div class="portfolio-tags-row">
-                <span class="portfolio-tag">Estética & Harmonização</span>
-                <span class="portfolio-tag" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.25); color: #34d399;">No Ar</span>
-              </div>
-              <h3 class="portfolio-title">Lumina Estética Avançada</h3>
-              <p class="portfolio-desc">
-                Estrutura digital sofisticada com catálogo interativo de tratamentos, apresentação do espaço e botão inteligente para triagem no WhatsApp.
-              </p>
-              <ul class="portfolio-meta-list">
-                <li class="portfolio-meta-item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Landing page com carregamento em menos de 1 segundo
-                </li>
-                <li class="portfolio-meta-item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Otimização de SEO local para busca orgânica no Google
-                </li>
-              </ul>
-            </div>
-            <a href="projetos/clinica-lumina.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary portfolio-btn">
-              <span>Ver Site</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Projeto 2: OdontoPrime -->
-        <div class="portfolio-card slide-up delay-200">
-          <div class="portfolio-browser-header">
-            <div class="browser-dots">
-              <span class="browser-dot red"></span>
-              <span class="browser-dot yellow"></span>
-              <span class="browser-dot green"></span>
-            </div>
-            <div class="browser-url-bar">
-              <span class="browser-status-dot"></span>
-              <span>https://odontoprimeclinica.com.br</span>
-            </div>
-          </div>
-          <div class="portfolio-thumb-container">
-            <img 
-              src="imagens/portfolio-odonto.jpg" 
-              alt="Site Clínica OdontoPrime" 
-              class="portfolio-img" 
-              onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" 
-            />
-            <div class="portfolio-fallback hidden">
-              <div class="model-fallback-glow"></div>
-              <div class="model-fallback-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <span class="model-fallback-badge">Projeto Ativo</span>
-              <h4 class="model-fallback-name">OdontoPrime Integrada</h4>
-            </div>
-          </div>
-          <div class="portfolio-body">
-            <div>
-              <div class="portfolio-tags-row">
-                <span class="portfolio-tag">Odontologia & Implantes</span>
-                <span class="portfolio-tag" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.25); color: #34d399;">No Ar</span>
-              </div>
-              <h3 class="portfolio-title">OdontoPrime Integrada</h3>
-              <p class="portfolio-desc">
-                Portal institucional moderno que transmite credibilidade e precisão clínica. Foco em captação de pacientes para implantes e alinhadores invisíveis.
-              </p>
-              <ul class="portfolio-meta-list">
-                <li class="portfolio-meta-item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Apresentação de registro CRO e corpo clínico
-                </li>
-                <li class="portfolio-meta-item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Mapa integrado com rotas e botão de contato imediato
-                </li>
-              </ul>
-            </div>
-            <a href="projetos/odontoprime.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary portfolio-btn">
-              <span>Ver Site</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Projeto 3: Dr. Rafael Duarte -->
-        <div class="portfolio-card slide-up delay-300">
-          <div class="portfolio-browser-header">
-            <div class="browser-dots">
-              <span class="browser-dot red"></span>
-              <span class="browser-dot yellow"></span>
-              <span class="browser-dot green"></span>
-            </div>
-            <div class="browser-url-bar">
-              <span class="browser-status-dot"></span>
-              <span>https://drrafaelduarte.med.br</span>
-            </div>
-          </div>
-          <div class="portfolio-thumb-container">
-            <img 
-              src="imagens/portfolio-medico.jpg" 
-              alt="Site Dr. Rafael Duarte Ortopedia" 
-              class="portfolio-img" 
-              onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" 
-            />
-            <div class="portfolio-fallback hidden">
-              <div class="model-fallback-glow"></div>
-              <div class="model-fallback-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
-              <span class="model-fallback-badge">Projeto Ativo</span>
-              <h4 class="model-fallback-name">Dr. Rafael Duarte Ortopedia</h4>
-            </div>
-          </div>
-          <div class="portfolio-body">
-            <div>
-              <div class="portfolio-tags-row">
-                <span class="portfolio-tag">Medicina & Cirurgia</span>
-                <span class="portfolio-tag" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.25); color: #34d399;">No Ar</span>
-              </div>
-              <h3 class="portfolio-title">Dr. Rafael Duarte | Ortopedia</h3>
-              <p class="portfolio-desc">
-                Design limpo e austero, destacando currículo profissional, especialidades em cirurgia de joelho, convênios atendidos e triagem de consultas.
-              </p>
-              <ul class="portfolio-meta-list">
-                <li class="portfolio-meta-item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Total conformidade com diretrizes do CFM
-                </li>
-                <li class="portfolio-meta-item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Módulo de dúvidas frequentes sobre procedimentos
-                </li>
-              </ul>
-            </div>
-            <a href="projetos/dr-rafael.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary portfolio-btn">
-              <span>Ver Site</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Projeto 4: Don Corleone Barbearia -->
-        <div class="portfolio-card slide-up delay-400">
-          <div class="portfolio-browser-header">
-            <div class="browser-dots">
-              <span class="browser-dot red"></span>
-              <span class="browser-dot yellow"></span>
-              <span class="browser-dot green"></span>
-            </div>
-            <div class="browser-url-bar">
-              <span class="browser-status-dot"></span>
-              <span>https://doncorleonebarber.com.br</span>
-            </div>
-          </div>
-          <div class="portfolio-thumb-container">
-            <img 
-              src="imagens/portfolio-barbearia.jpg" 
-              alt="Site Don Corleone Barbearia" 
-              class="portfolio-img" 
-              onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" 
-            />
-            <div class="portfolio-fallback hidden">
-              <div class="model-fallback-glow"></div>
-              <div class="model-fallback-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="6" cy="6" r="3"></circle>
-                  <circle cx="6" cy="18" r="3"></circle>
-                  <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
-                  <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
-                  <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
-                </svg>
-              </div>
-              <span class="model-fallback-badge">Projeto Ativo</span>
-              <h4 class="model-fallback-name">Don Corleone Barbearia</h4>
-            </div>
-          </div>
-          <div class="portfolio-body">
-            <div>
-              <div class="portfolio-tags-row">
-                <span class="portfolio-tag">Cuidado & Estilo Masculino</span>
-                <span class="portfolio-tag" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.25); color: #34d399;">No Ar</span>
-              </div>
-              <h3 class="portfolio-title">Don Corleone Barbearia</h3>
-              <p class="portfolio-desc">
-                Presença digital marcante com tabela de serviços completa, integração com agendamento via WhatsApp e conexão com redes sociais.
-              </p>
-              <ul class="portfolio-meta-list">
-                <li class="portfolio-meta-item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Design estilizado com alta retenção de clientes
-                </li>
-                <li class="portfolio-meta-item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Tabela dinâmica de horários e valores
-                </li>
-              </ul>
-            </div>
-            <a href="projetos/don-corleone.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary portfolio-btn">
-              <span>Ver Site</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
             </a>
           </div>
         </div>
       </div>
+      <!-- Bolinhas Indicadoras para o Celular -->
+      <div class="carousel-dots" id="modelsDots"></div>
     </div>
   </section>
 
@@ -2705,7 +2352,7 @@
             <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="faq-answer">
-            O pagamento é único a partir de R$ 600, feito comumente em 50% de sinal no início do projeto e os 50% restantes apenas após você ver a prévia pronta e aprovada, antes da publicação final. Aceitamos Pix com emissão formal.
+            O pagamento é único a partir de R$ 600, feito comumente em 50% de sinal no início do projeto e os 50% restantes apenas após você ver a prévia pronta e aprovada, antes da publicação final. Aceitamos Pix.
           </div>
         </div>
       </div>
@@ -2750,12 +2397,11 @@
               </label>
               <select id="clienteSegmento" class="form-select" required>
                 <option value="" disabled selected>Selecione seu segmento...</option>
-                <option value="Clínica Estética e Harmonização">Clínica Estética & Harmonização</option>
+                <option value="Clínica Estética">Clínica Estética</option>
                 <option value="Clínica Odontológica">Clínica Odontológica</option>
-                <option value="Clínica Médica / Saúde Geral">Clínica Médica / Saúde Geral</option>
-                <option value="Barbearia ou Salão de Beleza">Barbearia ou Salão de Beleza</option>
-                <option value="Advocacia ou Consultoria">Advocacia ou Consultoria</option>
-                <option value="Outro Negócio Local">Outro Negócio Local</option>
+                <option value="Barbearia ou Salão">Barbearia ou Salão</option>
+                <option value="Profissional liberal (médico, advogado, psicólogo)">Profissional liberal (médico, advogado, psicólogo)</option>
+                <option value="Outro negócio local">Outro negócio local</option>
               </select>
             </div>
 
@@ -2802,7 +2448,7 @@
             </div>
           </a>
           <p class="footer-brand-desc">
-            Criação de sites profissionais e de alta conversão para clínicas e negócios locais no Brasil. Presença digital moderna, elegante e sem mensalidades.
+            Criação de sites profissionais e de alta conversão para clínicas, cuidados pessoais e profissionais liberais no Brasil. Presença digital moderna, elegante e sem mensalidades.
           </p>
         </div>
 
@@ -2813,7 +2459,6 @@
             <li><a href="#problema">O Problema</a></li>
             <li><a href="#servicos">Nossos Serviços</a></li>
             <li><a href="#modelos">Modelos de Sites</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
             <li><a href="#como-funciona">Como Funciona</a></li>
             <li><a href="#precos">Tabela de Preços</a></li>
             <li><a href="#faq">Perguntas Frequentes</a></li>
@@ -2856,105 +2501,19 @@
   </footer>
 
   <!-- ========================================================================
-       BOTÃO FLUTUANTE DE WHATSAPP (EM TODA A PÁGINA)
+       BOTÃO FLUTUANTE DE WHATSAPP (56px, Círculo, Pulso Contínuo, Apenas Ícone)
        ======================================================================== -->
   <div 
     class="floating-whatsapp" 
     id="floatingWhatsappBtn"
-    onclick="handleWhatsAppClick('Olá! Gostaria de tirar dúvidas sobre a criação de um site com a Orizon Studio.')"
+    onclick="handleWhatsAppClick('Olá! Vim pelo site da Orizon Studio e quero um site para meu negócio.')"
     role="button"
-    aria-label="Abrir conversa no WhatsApp"
+    aria-label="Falar no WhatsApp"
   >
-    <span class="whatsapp-badge-pulse"></span>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <span class="wa-pulse-ring"></span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
     </svg>
-    <span>Falar no WhatsApp</span>
-  </div>
-
-  <!-- ========================================================================
-       MODAL DE INFORMAÇÃO / CANAL DE WHATSAPP EM ATIVAÇÃO
-       ======================================================================== -->
-  <div class="modal-overlay" id="whatsappNoticeModal">
-    <div class="modal-box">
-      <button class="modal-close-btn" onclick="closeNoticeModal()" aria-label="Fechar modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-icon-wrap">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-      </div>
-
-      <h3 style="font-size: 1.45rem; margin-bottom: 12px; color: #ffffff;">Atendimento Orizon Studio</h3>
-      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;" id="modalNoticeText">
-        Nosso canal oficial do WhatsApp está em fase final de configuração. Para receber atendimento imediato, tirar dúvidas ou solicitar a sua prévia, fale conosco diretamente pelo Instagram oficial!
-      </p>
-
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <a href="https://www.instagram.com/orizo.nstudio/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
-          <span>Abrir Instagram @orizo.nstudio</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-        <button onclick="closeNoticeModal()" class="btn btn-secondary btn-block">
-          Voltar ao site
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Detalhes do Modelo -->
-  <div class="modal-overlay" id="modelDetailsModal">
-    <div class="modal-box">
-      <button class="modal-close-btn" onclick="closeModelModal()" aria-label="Fechar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="pill-badge" id="modalSegmentBadge">Modelo</div>
-      <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: #ffffff;" id="modalModelTitle">Modelo do Site</h3>
-      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;" id="modalModelDesc">
-        Descrição do modelo.
-      </p>
-
-      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
-        <h4 style="font-size: 0.95rem; margin-bottom: 10px; color: #38bdf8;">Recursos inclusos neste modelo:</h4>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: #cbd5e1;">
-          <li style="display: flex; align-items: center; gap: 8px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Paleta de cores e tipografia de alto padrão
-          </li>
-          <li style="display: flex; align-items: center; gap: 8px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Seção de serviços, diferenciais e equipe
-          </li>
-          <li style="display: flex; align-items: center; gap: 8px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Formulário e botão de agendamento no WhatsApp
-          </li>
-          <li style="display: flex; align-items: center; gap: 8px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Otimizado para velocidade máxima no celular
-          </li>
-        </ul>
-      </div>
-
-      <button id="modalCtaBtn" class="btn btn-primary btn-block">
-        <span>Quero este modelo para o meu negócio</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-      </button>
-    </div>
   </div>
 
   <!-- ========================================================================
@@ -2967,54 +2526,22 @@
     const WHATSAPP_LINK_BASE = 'https://wa.me/message/E6WY3ZDGM4S6H1'; 
     const INSTAGRAM_URL = 'https://www.instagram.com/orizo.nstudio/';
 
-    // Função universal para abrir WhatsApp com mensagem pré-formatada
+    // Sincronização dinâmica da tag canônica SEO com a URL real do ambiente
+    try {
+      const canonical = document.getElementById('canonicalTag');
+      if (canonical && window.location.origin && !window.location.origin.includes('localhost')) {
+        canonical.href = window.location.origin + window.location.pathname;
+      }
+    } catch (e) {}
+
+    // Função universal para abrir WhatsApp com link configurado e mensagem pré-formatada
     function handleWhatsAppClick(customText) {
-      const text = customText || 'Olá! Gostaria de saber mais sobre a criação de um site profissional com a Orizon Studio.';
+      const defaultMsg = 'Olá! Vim pelo site da Orizon Studio e quero um site para meu negócio.';
+      const text = customText || defaultMsg;
       const separator = WHATSAPP_LINK_BASE.includes('?') ? '&' : '?';
       const url = WHATSAPP_LINK_BASE + separator + 'text=' + encodeURIComponent(text);
-      window.open(url, '_blank');
+      window.open(url, '_blank', 'noopener,noreferrer');
     }
-
-    // Modal de Notificação do WhatsApp / Instagram
-    function openNoticeModal(leadText) {
-      const modal = document.getElementById('whatsappNoticeModal');
-      const textElem = document.getElementById('modalNoticeText');
-      if (textElem && leadText) {
-        textElem.innerHTML = 'Nosso WhatsApp oficial está sendo ativado. Para agilizar o seu orçamento para a mensagem: <em>"' + escapeHtml(leadText) + '"</em>, fale diretamente com nossa equipe no Instagram <strong>@orizo.nstudio</strong>!';
-      }
-      modal.classList.add('open');
-    }
-
-    function closeNoticeModal() {
-      document.getElementById('whatsappNoticeModal').classList.remove('open');
-    }
-
-    // Modal de Detalhes dos Modelos
-    function openModelDetails(modelTitle, modelDesc) {
-      document.getElementById('modalSegmentBadge').textContent = 'Modelo Pré-estruturado';
-      document.getElementById('modalModelTitle').textContent = modelTitle;
-      document.getElementById('modalModelDesc').textContent = modelDesc;
-      
-      const ctaBtn = document.getElementById('modalCtaBtn');
-      ctaBtn.onclick = function() {
-        closeModelModal();
-        handleWhatsAppClick('Olá! Gostaria de ver mais detalhes e solicitar o modelo de ' + modelTitle + ' da Orizon Studio.');
-      };
-
-      document.getElementById('modelDetailsModal').classList.add('open');
-    }
-
-    function closeModelModal() {
-      document.getElementById('modelDetailsModal').classList.remove('open');
-    }
-
-    // Fechar modais ao clicar no overlay
-    window.addEventListener('click', function(e) {
-      const noticeModal = document.getElementById('whatsappNoticeModal');
-      const modelModal = document.getElementById('modelDetailsModal');
-      if (e.target === noticeModal) closeNoticeModal();
-      if (e.target === modelModal) closeModelModal();
-    });
 
     // Submissão do Formulário de Lead (Section 9)
     function handleFormSubmit(event) {
@@ -3025,16 +2552,14 @@
       const segmento = document.getElementById('clienteSegmento').value;
 
       if (!nome || !telefone || !segmento) {
-        alert('Por favor, preencha todos os campos do formulário.');
         return;
       }
 
       const mensagemWhatsApp = 
-        'Olá, Orizon Studio!\n' +
-        'Meu nome é: ' + nome + '\n' +
-        'Telefone: ' + telefone + '\n' +
-        'Meu negócio é do segmento: ' + segmento + '\n' +
-        'Gostaria de um orçamento para o meu site profissional.';
+        'Olá! Vim pelo site da Orizon Studio e quero um site para meu negócio.\n\n' +
+        'Nome: ' + nome + '\n' +
+        'WhatsApp/Telefone: ' + telefone + '\n' +
+        'Tipo de Negócio: ' + segmento;
 
       handleWhatsAppClick(mensagemWhatsApp);
     }
@@ -3058,6 +2583,7 @@
     // Navbar Scrolled Effect
     window.addEventListener('scroll', function() {
       const nav = document.getElementById('navbar');
+      if (!nav) return;
       if (window.scrollY > 40) {
         nav.classList.add('scrolled');
       } else {
@@ -3069,14 +2595,18 @@
     const navToggle = document.getElementById('navToggle');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    navToggle.addEventListener('click', function() {
-      navToggle.classList.toggle('active');
-      mobileMenu.classList.toggle('open');
-    });
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+      });
+    }
 
     function closeMobileMenu() {
-      navToggle.classList.remove('active');
-      mobileMenu.classList.remove('open');
+      if (navToggle && mobileMenu) {
+        navToggle.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      }
     }
 
     // FAQ Accordion
@@ -3084,7 +2614,6 @@
       const item = btn.parentElement;
       const isActive = item.classList.contains('active');
       
-      // Fecha todos os outros itens para um efeito sanfona limpo
       document.querySelectorAll('.faq-item').forEach(function(el) {
         el.classList.remove('active');
       });
@@ -3094,25 +2623,154 @@
       }
     }
 
-    // Helper sanitização simples de texto
-    function escapeHtml(text) {
-      return text
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+    // =========================================================================
+    // CARROSSEL NO CELULAR (Telas até 768px): Scroll-Snap, Touch, Auto-Avanço e Bolinhas
+    // =========================================================================
+    function initMobileCarousels() {
+      const carouselConfigs = [
+        { containerId: 'problemCarousel', dotsId: 'problemDots' },
+        { containerId: 'servicesCarousel', dotsId: 'servicesDots' },
+        { containerId: 'modelsCarousel', dotsId: 'modelsDots' }
+      ];
+
+      carouselConfigs.forEach(function(config) {
+        const container = document.getElementById(config.containerId);
+        const dotsContainer = document.getElementById(config.dotsId);
+        if (!container || !dotsContainer) return;
+
+        const cards = Array.from(container.children);
+        if (!cards.length) return;
+
+        // Cria bolinhas indicadoras dinamicamente
+        dotsContainer.innerHTML = '';
+        cards.forEach(function(_, idx) {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Slide ' + (idx + 1));
+          dot.addEventListener('click', function() {
+            pauseAndResume();
+            scrollToCard(idx);
+          });
+          dotsContainer.appendChild(dot);
+        });
+
+        let currentIndex = 0;
+        let autoPlayTimer = null;
+        let resumeTimer = null;
+        let isUserInteracting = false;
+
+        function getCardIndex() {
+          const scrollPos = container.scrollLeft;
+          const cardWidth = cards[0].offsetWidth + 16;
+          let closestIdx = Math.round(scrollPos / cardWidth);
+          if (closestIdx < 0) closestIdx = 0;
+          if (closestIdx >= cards.length) closestIdx = cards.length - 1;
+          return closestIdx;
+        }
+
+        function updateDots(idx) {
+          currentIndex = idx;
+          const dots = dotsContainer.querySelectorAll('.carousel-dot');
+          dots.forEach(function(dot, i) {
+            if (i === idx) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+
+        function scrollToCard(idx) {
+          if (window.innerWidth > 768) return;
+          const targetCard = cards[idx];
+          if (!targetCard) return;
+
+          const containerWidth = container.offsetWidth;
+          const cardOffset = targetCard.offsetLeft;
+          const cardWidth = targetCard.offsetWidth;
+          const scrollTo = cardOffset - (containerWidth - cardWidth) / 2;
+
+          container.scrollTo({
+            left: Math.max(0, scrollTo),
+            behavior: 'smooth'
+          });
+          updateDots(idx);
+        }
+
+        function nextSlide() {
+          if (window.innerWidth > 768) return;
+          if (isUserInteracting) return;
+          let next = currentIndex + 1;
+          if (next >= cards.length) {
+            next = 0; // Volta ao primeiro card ao chegar no último
+          }
+          scrollToCard(next);
+        }
+
+        function startAutoPlay() {
+          stopAutoPlay();
+          if (window.innerWidth <= 768) {
+            // Avança automaticamente a cada 4 segundos com transição suave
+            autoPlayTimer = setInterval(nextSlide, 4000);
+          }
+        }
+
+        function stopAutoPlay() {
+          if (autoPlayTimer) {
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = null;
+          }
+        }
+
+        function pauseAndResume() {
+          isUserInteracting = true;
+          stopAutoPlay();
+          if (resumeTimer) clearTimeout(resumeTimer);
+          // Retoma depois de 6 segundos sem toque
+          resumeTimer = setTimeout(function() {
+            isUserInteracting = false;
+            startAutoPlay();
+          }, 6000);
+        }
+
+        // Sincroniza bolinhas com a rolagem do usuário
+        let scrollTimeout = null;
+        container.addEventListener('scroll', function() {
+          if (window.innerWidth > 768) return;
+          if (scrollTimeout) clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(function() {
+            const activeIdx = getCardIndex();
+            updateDots(activeIdx);
+          }, 60);
+        }, { passive: true });
+
+        // Pausa no toque ou arrasto
+        container.addEventListener('touchstart', pauseAndResume, { passive: true });
+        container.addEventListener('touchmove', pauseAndResume, { passive: true });
+        container.addEventListener('mousedown', pauseAndResume, { passive: true });
+
+        // Inicia o carrossel no celular
+        startAutoPlay();
+
+        // Gerencia redimensionamento de tela
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 768) {
+            stopAutoPlay();
+          } else if (!autoPlayTimer && !isUserInteracting) {
+            startAutoPlay();
+          }
+        });
+      });
     }
 
     // =========================================================================
     // ANIMAÇÃO SUTIL AO ROLAR (DETECÇÃO VIEWPORT VIA INTERSECTION OBSERVER)
     // =========================================================================
     function initScrollAnimations() {
-      // Elementos que possuem classes de animação ao rolar
       const animatedElements = document.querySelectorAll('.reveal, .slide-up, .fade-in, .scale-up');
 
       if (!('IntersectionObserver' in window)) {
-        // Fallback imediato para navegadores antigos sem suporte
         animatedElements.forEach(function(el) {
           el.classList.add('is-visible');
         });
@@ -3121,7 +2779,6 @@
 
       const observerConfig = {
         root: null,
-        // Inicia a transição com margem de 40px para antecipar levemente e garantir fluidez
         rootMargin: '0px 0px -40px 0px',
         threshold: 0.1
       };
@@ -3129,9 +2786,7 @@
       const scrollObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            // Dispara a animação fluida adicionando a classe CSS
             entry.target.classList.add('is-visible');
-            // Deixa de observar o elemento para execução única e leve
             observer.unobserve(entry.target);
           }
         });
@@ -3142,11 +2797,16 @@
       });
     }
 
-    // Inicializa a observação
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initScrollAnimations);
-    } else {
+    // Inicialização completa
+    function init() {
       initScrollAnimations();
+      initMobileCarousels();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
     }
   </script>
 </body>
