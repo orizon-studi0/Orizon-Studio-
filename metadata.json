@@ -1,0 +1,8 @@
+{
+  "name": "Orizon Studio | Criação de Sites Profissionais",
+  "description": "Criação de sites modernos, elegantes e de alta conversão para clínicas e negócios locais no Brasil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
