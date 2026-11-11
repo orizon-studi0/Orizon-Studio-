@@ -1384,8 +1384,8 @@
        ========================================================================== */
     .floating-whatsapp {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
+      bottom: calc(88px + env(safe-area-inset-bottom));
+      right: 16px;
       width: 56px;
       height: 56px;
       border-radius: 50%;
@@ -1512,26 +1512,34 @@
         scroll-snap-type: x mandatory !important;
         -webkit-overflow-scrolling: touch !important;
         gap: 16px !important;
-        padding: 8px 16px 16px 16px !important;
+        padding: 12px 11% 18px 11% !important;
         margin-left: -16px !important;
         margin-right: -16px !important;
         scrollbar-width: none !important;
         -ms-overflow-style: none !important;
         scroll-behavior: smooth;
+        box-sizing: border-box !important;
       }
 
       .mobile-carousel::-webkit-scrollbar {
         display: none !important;
       }
 
-      /* Um card quase inteiro por vez (85%), mostrando um pedaço do próximo para indicar arrasto */
+      /* Cada card ocupa cerca de 78% da largura da tela e fica centralizado */
       .mobile-carousel > * {
-        flex: 0 0 85% !important;
-        max-width: 85% !important;
-        min-width: 85% !important;
+        flex: 0 0 78% !important;
+        max-width: 78% !important;
+        min-width: 78% !important;
         scroll-snap-align: center !important;
-        scroll-snap-stop: always !important;
+        scroll-snap-stop: normal !important;
         box-sizing: border-box !important;
+        will-change: transform, opacity;
+        transition: transform 150ms ease-out, opacity 150ms ease-out, filter 150ms ease-out;
+      }
+
+      /* Transição leve desligada durante arrasto manual para não engasgar */
+      .mobile-carousel.is-dragging > * {
+        transition: none !important;
       }
 
       /* Bolinhas indicadoras embaixo no celular */
@@ -1626,6 +1634,14 @@
       /* Sem bolinhas nem carrossel no computador */
       .carousel-dots {
         display: none !important;
+      }
+      .problem-grid > *,
+      .services-grid > *,
+      .models-grid > * {
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        transition: none !important;
       }
     }
   </style>
@@ -1987,7 +2003,7 @@
                 </li>
               </ul>
             </div>
-            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
+            <a href="modelo-landing-page.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
               <span>Ver modelo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -2038,7 +2054,7 @@
                 </li>
               </ul>
             </div>
-            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
+            <a href="projetos/odontoprime.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
               <span>Ver modelo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -2093,7 +2109,7 @@
                 </li>
               </ul>
             </div>
-            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
+            <a href="projetos/don-corleone.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
               <span>Ver modelo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -2150,7 +2166,7 @@
                 </li>
               </ul>
             </div>
-            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
+            <a href="projetos/dr-rafael.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block model-btn">
               <span>Ver modelo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -2624,7 +2640,7 @@
     }
 
     // =========================================================================
-    // CARROSSEL NO CELULAR (Telas até 768px): Scroll-Snap, Touch, Auto-Avanço e Bolinhas
+    // CARROSSEL NO CELULAR (Telas até 768px): Scroll-Snap, Touch, Auto-Avanço e Efeito Fluido
     // =========================================================================
     function initMobileCarousels() {
       const carouselConfigs = [
@@ -2649,28 +2665,25 @@
           dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
           dot.setAttribute('aria-label', 'Slide ' + (idx + 1));
           dot.addEventListener('click', function() {
-            pauseAndResume();
+            handleUserInteractionStart();
             scrollToCard(idx);
+            scheduleResume(6000);
           });
           dotsContainer.appendChild(dot);
         });
 
+        // Estado e referências isoladas por container (sem risco de reinício por re-render)
         let currentIndex = 0;
         let autoPlayTimer = null;
         let resumeTimer = null;
+        let scrollIdleTimer = null;
+        let snapRestoreTimer = null;
         let isUserInteracting = false;
+        let isIntersecting = false;
+        let rafId = null;
 
-        function getCardIndex() {
-          const scrollPos = container.scrollLeft;
-          const cardWidth = cards[0].offsetWidth + 16;
-          let closestIdx = Math.round(scrollPos / cardWidth);
-          if (closestIdx < 0) closestIdx = 0;
-          if (closestIdx >= cards.length) closestIdx = cards.length - 1;
-          return closestIdx;
-        }
-
+        // Atualiza bolinhas indicadoras
         function updateDots(idx) {
-          currentIndex = idx;
           const dots = dotsContainer.querySelectorAll('.carousel-dot');
           dots.forEach(function(dot, i) {
             if (i === idx) {
@@ -2681,29 +2694,89 @@
           });
         }
 
+        // Calcula dinamicamente o efeito dos cards: central em foco (escala 1, opacidade 1),
+        // laterais em escala 0.88, opacidade 0.4 e blur suave
+        function updateCardsEffect() {
+          if (window.innerWidth > 768) {
+            cards.forEach(function(card) {
+              card.style.transform = '';
+              card.style.opacity = '';
+              card.style.filter = '';
+            });
+            return;
+          }
+
+          const containerCenter = container.scrollLeft + container.clientWidth / 2;
+          let closestIdx = 0;
+          let minDistance = Infinity;
+
+          cards.forEach(function(card, idx) {
+            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+            const distance = Math.abs(containerCenter - cardCenter);
+            const cardWidth = card.offsetWidth || 1;
+            // d = min(1, distância / largura do card)
+            const d = Math.min(1, distance / cardWidth);
+
+            // Escala (1 - 0.12 * d), Opacidade (1 - 0.6 * d) e Blur
+            const scale = (1 - 0.12 * d).toFixed(4);
+            const opacity = (1 - 0.6 * d).toFixed(4);
+            const blur = (0.5 * d).toFixed(2);
+
+            card.style.transform = 'scale(' + scale + ')';
+            card.style.opacity = opacity;
+            card.style.filter = d > 0.05 ? 'blur(' + blur + 'px)' : 'none';
+
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestIdx = idx;
+            }
+          });
+
+          if (closestIdx !== currentIndex) {
+            currentIndex = closestIdx;
+            updateDots(closestIdx);
+          }
+        }
+
+        function requestUpdate() {
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(updateCardsEffect);
+        }
+
         function scrollToCard(idx) {
           if (window.innerWidth > 768) return;
           const targetCard = cards[idx];
           if (!targetCard) return;
 
-          const containerWidth = container.offsetWidth;
-          const cardOffset = targetCard.offsetLeft;
-          const cardWidth = targetCard.offsetWidth;
-          const scrollTo = cardOffset - (containerWidth - cardWidth) / 2;
+          // Se o scroll-snap estiver impedindo o scrollTo suave, aplique scroll-snap-type: none só durante o scroll programático e restaure depois de 500 ms
+          container.style.scrollSnapType = 'none';
+          if (snapRestoreTimer) clearTimeout(snapRestoreTimer);
+          snapRestoreTimer = setTimeout(function() {
+            container.style.scrollSnapType = '';
+          }, 500);
+
+          const targetLeft = targetCard.offsetLeft - (container.clientWidth - targetCard.offsetWidth) / 2;
 
           container.scrollTo({
-            left: Math.max(0, scrollTo),
+            left: Math.max(0, targetLeft),
             behavior: 'smooth'
           });
+
+          currentIndex = idx;
           updateDots(idx);
+          requestUpdate();
         }
 
         function nextSlide() {
           if (window.innerWidth > 768) return;
+          // Só avance quando o carrossel estiver visível na tela e a aba estiver ativa
+          if (!isIntersecting) return;
+          if (document.visibilityState !== 'visible') return;
           if (isUserInteracting) return;
+
           let next = currentIndex + 1;
           if (next >= cards.length) {
-            next = 0; // Volta ao primeiro card ao chegar no último
+            next = 0; // Ao chegar no último, volte ao primeiro
           }
           scrollToCard(next);
         }
@@ -2711,7 +2784,6 @@
         function startAutoPlay() {
           stopAutoPlay();
           if (window.innerWidth <= 768) {
-            // Avança automaticamente a cada 4 segundos com transição suave
             autoPlayTimer = setInterval(nextSlide, 4000);
           }
         }
@@ -2723,42 +2795,92 @@
           }
         }
 
-        function pauseAndResume() {
+        function handleUserInteractionStart() {
           isUserInteracting = true;
-          stopAutoPlay();
-          if (resumeTimer) clearTimeout(resumeTimer);
-          // Retoma depois de 6 segundos sem toque
-          resumeTimer = setTimeout(function() {
-            isUserInteracting = false;
-            startAutoPlay();
-          }, 6000);
+          container.classList.add('is-dragging');
+          if (resumeTimer) {
+            clearTimeout(resumeTimer);
+            resumeTimer = null;
+          }
         }
 
-        // Sincroniza bolinhas com a rolagem do usuário
-        let scrollTimeout = null;
-        container.addEventListener('scroll', function() {
-          if (window.innerWidth > 768) return;
-          if (scrollTimeout) clearTimeout(scrollTimeout);
-          scrollTimeout = setTimeout(function() {
-            const activeIdx = getCardIndex();
-            updateDots(activeIdx);
-          }, 60);
+        function scheduleResume(delay) {
+          container.classList.remove('is-dragging');
+          if (resumeTimer) clearTimeout(resumeTimer);
+          // Retome 6 segundos depois do último toque ou rolagem
+          resumeTimer = setTimeout(function() {
+            isUserInteracting = false;
+          }, delay || 6000);
+        }
+
+        function handleUserInteractionEnd() {
+          scheduleResume(6000);
+        }
+
+        // Eventos de pausa e retomada: touchstart, pointerdown, wheel
+        container.addEventListener('pointerdown', handleUserInteractionStart, { passive: true });
+        container.addEventListener('pointerup', handleUserInteractionEnd, { passive: true });
+        container.addEventListener('pointercancel', handleUserInteractionEnd, { passive: true });
+
+        container.addEventListener('touchstart', handleUserInteractionStart, { passive: true });
+        container.addEventListener('touchend', handleUserInteractionEnd, { passive: true });
+        container.addEventListener('touchcancel', handleUserInteractionEnd, { passive: true });
+
+        container.addEventListener('wheel', function() {
+          handleUserInteractionStart();
+          scheduleResume(6000);
         }, { passive: true });
 
-        // Pausa no toque ou arrasto
-        container.addEventListener('touchstart', pauseAndResume, { passive: true });
-        container.addEventListener('touchmove', pauseAndResume, { passive: true });
-        container.addEventListener('mousedown', pauseAndResume, { passive: true });
+        // Scroll listener contínuo e detecção de término de rolagem
+        container.addEventListener('scroll', function() {
+          if (window.innerWidth > 768) return;
+          requestUpdate();
 
-        // Inicia o carrossel no celular
+          if (scrollIdleTimer) clearTimeout(scrollIdleTimer);
+          scrollIdleTimer = setTimeout(function() {
+            scheduleResume(6000);
+          }, 150);
+        }, { passive: true });
+
+        // IntersectionObserver para garantir que só avança quando estiver visível na tela
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.target === container) {
+                isIntersecting = entry.isIntersecting;
+              }
+            });
+          }, { threshold: 0.15 });
+          observer.observe(container);
+        } else {
+          isIntersecting = true;
+        }
+
+        // Inicialização
+        requestUpdate();
         startAutoPlay();
 
-        // Gerencia redimensionamento de tela
+        // Pausa/retomada com base no status da aba do navegador
+        document.addEventListener('visibilitychange', function() {
+          if (document.visibilityState === 'visible') {
+            requestUpdate();
+          }
+        });
+
+        // Adaptação no redimensionamento da janela
         window.addEventListener('resize', function() {
           if (window.innerWidth > 768) {
             stopAutoPlay();
-          } else if (!autoPlayTimer && !isUserInteracting) {
-            startAutoPlay();
+            cards.forEach(function(card) {
+              card.style.transform = '';
+              card.style.opacity = '';
+              card.style.filter = '';
+            });
+          } else {
+            requestUpdate();
+            if (!autoPlayTimer) {
+              startAutoPlay();
+            }
           }
         });
       });

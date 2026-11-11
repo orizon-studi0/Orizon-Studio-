@@ -1,81 +1,396 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumina Estética Avançada | Demonstração Orizon Studio</title>
-  <meta name="description" content="Site profissional para clínica de estética avançada e harmonização. Projeto desenvolvido pela Orizon Studio.">
+  <title>Harmonização Facial e Estética Avançada em Moema, SP | Lumina Estética</title>
+  <meta name="description" content="Clínica de estética avançada e harmonização facial em Moema, São Paulo. Procedimentos médicos seguros com produtos originais Anvisa. Agende sua avaliação no WhatsApp!">
+  <meta name="keywords" content="estética em Moema, harmonização facial Moema, clínica estética São Paulo, bioestimulador de colágeno Moema, botox Moema SP">
+  <meta name="author" content="Lumina Estética Avançada">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Lumina Estética Avançada">
+  <meta property="og:title" content="Harmonização Facial e Estética em Moema, SP | Lumina Estética">
+  <meta property="og:description" content="Especialistas em realçar sua beleza natural com segurança, precisão e tecnologia médica no coração de Moema.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Lumina Estética Avançada",
+    "telephone": "+55-11-99876-5432",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Ibirapuera, 2450, Conjunto 82",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "04028-002",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.6025,
+      "longitude": -46.6622
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
+      --bg: #080c14;
+      --bg-alt: #0d131f;
+      --surface: rgba(18, 25, 38, 0.75);
+      --surface-hover: rgba(26, 36, 54, 0.9);
+      --border: rgba(196, 154, 108, 0.22);
+      --border-subtle: rgba(255, 255, 255, 0.08);
       --primary: #c49a6c;
-      --primary-dark: #a1784c;
-      --bg: #0b0f17;
-      --card-bg: rgba(22, 29, 44, 0.7);
-      --border: rgba(196, 154, 108, 0.2);
+      --primary-hover: #d5ab7d;
+      --primary-glow: rgba(196, 154, 108, 0.35);
       --text: #f8fafc;
-      --muted: #94a3b8;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --wa-green: #25d366;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      --container: 1180px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    .demo-bar {
-      background: #111827; border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding: 10px 20px; font-size: 0.82rem; display: flex; justify-content: space-between; align-items: center;
-      position: sticky; top: 0; z-index: 100;
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+    .demo-ribbon {
+      background: linear-gradient(90deg, #0e1726, #162238);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 16px; font-size: 0.82rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted);
+      position: relative; z-index: 1001;
     }
-    .demo-bar a { color: #60a5fa; text-decoration: none; font-weight: 600; }
-    .demo-bar a:hover { text-decoration: underline; }
-    .nav { padding: 20px; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-size: 1.3rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
-    .brand span { color: var(--primary); }
-    .hero { text-align: center; padding: 80px 20px 60px; max-width: 800px; margin: 0 auto; }
-    .badge { display: inline-block; padding: 6px 14px; background: rgba(196, 154, 108, 0.15); border: 1px solid var(--border); border-radius: 9999px; color: var(--primary); font-size: 0.8rem; font-weight: 600; margin-bottom: 16px; }
-    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin-bottom: 20px; color: #fff; }
-    p.lead { font-size: 1.1rem; color: var(--muted); margin-bottom: 30px; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #0b0f17; padding: 14px 28px; border-radius: 10px; font-weight: 700; text-decoration: none; transition: 0.2s; }
-    .btn:hover { background: #d4ab7e; transform: translateY(-2px); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 1100px; margin: 40px auto 80px; padding: 0 20px; }
-    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 26px; backdrop-filter: blur(10px); }
-    .card h3 { color: #fff; margin-bottom: 10px; font-size: 1.2rem; }
-    .card p { color: var(--muted); font-size: 0.92rem; }
-    .footer { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; color: var(--muted); }
+    .demo-ribbon strong { color: var(--primary); }
+    .demo-ribbon a { color: #60a5fa; text-decoration: none; font-weight: 600; }
+    .demo-ribbon a:hover { text-decoration: underline; }
+
+    .ambient-glow { position: fixed; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, var(--primary-glow) 0%, rgba(196,154,108,0) 70%); filter: blur(90px); pointer-events: none; z-index: 0; opacity: 0.28; }
+    .ambient-1 { top: -100px; right: -100px; }
+    .ambient-2 { bottom: 15%; left: -150px; }
+
+    .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px; position: relative; z-index: 2; }
+    h1, h2, h3, h4 { color: #fff; font-weight: 700; letter-spacing: -0.025em; line-height: 1.2; text-wrap: balance; }
+    p { color: var(--text-muted); font-size: 1rem; }
+
+    .kicker { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--primary); margin-bottom: 12px; display: inline-block; }
+    .section-header { text-align: center; max-width: 680px; margin: 0 auto 50px auto; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 14px; }
+    .section-desc { font-size: 1.05rem; line-height: 1.6; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: inherit; font-size: 0.95rem; font-weight: 700; padding: 14px 26px; border-radius: var(--radius-md); text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: var(--transition); white-space: nowrap; }
+    .btn-primary { background: linear-gradient(135deg, #c49a6c 0%, #ad8255 100%); color: #080c14; box-shadow: 0 4px 18px rgba(196, 154, 108, 0.35); }
+    .btn-primary:hover { background: linear-gradient(135deg, #d5ab7d 0%, #c49a6c 100%); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(196, 154, 108, 0.5); }
+    .btn-wa { background: #25d366; color: #ffffff; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35); }
+    .btn-wa:hover { background: #20ba5a; transform: translateY(-2px); }
+    .btn-secondary { background: rgba(255, 255, 255, 0.05); color: var(--text); border-color: var(--border-subtle); backdrop-filter: blur(8px); }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+    .btn-sm { padding: 10px 18px; font-size: 0.85rem; }
+    .btn-block { width: 100%; }
+
+    .card { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 30px; backdrop-filter: blur(14px); transition: var(--transition); }
+    .card:hover { border-color: var(--border); background: var(--surface-hover); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); }
+
+    .header { position: sticky; top: 0; width: 100%; background: rgba(8, 12, 20, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border-subtle); z-index: 1000; }
+    .header-nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+    .brand-icon { width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, var(--primary) 0%, #8c6439 100%); display: flex; align-items: center; justify-content: center; color: #080c14; font-weight: 800; }
+    .brand-name { font-size: 1.15rem; font-weight: 800; line-height: 1.1; }
+    .brand-tag { font-size: 0.7rem; color: var(--primary); text-transform: uppercase; font-weight: 600; }
+    .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; }
+    .nav-link { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: var(--transition); }
+    .nav-link:hover { color: #fff; }
+    .menu-toggle { display: none; background: transparent; border: 1px solid var(--border-subtle); border-radius: 8px; color: #fff; padding: 8px; cursor: pointer; }
+
+    .hero { padding: 70px 0 80px 0; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center; }
+    .hero-badge-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(196, 154, 108, 0.12); border: 1px solid var(--border); color: var(--primary); font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; }
+    .hero-title { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.12; margin-bottom: 20px; }
+    .hero-title span { background: linear-gradient(135deg, #ffffff 30%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-desc { font-size: 1.12rem; line-height: 1.65; margin-bottom: 34px; color: var(--text-muted); }
+    .hero-cta-group { display: flex; align-items: center; gap: 16px; margin-bottom: 36px; flex-wrap: wrap; }
+    .hero-social-proof { display: flex; align-items: center; gap: 18px; padding-top: 22px; border-top: 1px solid var(--border-subtle); }
+    .stars { color: #f59e0b; display: flex; gap: 2px; }
+
+    .hero-image-frame { border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6); }
+    .hero-image-frame img { width: 100%; height: 480px; object-fit: cover; display: block; }
+
+    .why-section { padding: 90px 0; background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 50%, var(--bg) 100%); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .why-number { font-size: 0.85rem; font-weight: 800; color: var(--primary); margin-bottom: 14px; display: block; }
+    .why-title { font-size: 1.25rem; margin-bottom: 12px; color: #fff; }
+
+    .services-section { padding: 90px 0; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 26px; }
+    .service-card { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+    .service-img-wrap { height: 200px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 22px; position: relative; border: 1px solid var(--border-subtle); }
+    .service-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .service-tag { position: absolute; top: 12px; left: 12px; background: rgba(8, 12, 20, 0.85); border: 1px solid var(--border); color: var(--primary); font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; }
+    .service-title { font-size: 1.25rem; margin-bottom: 10px; color: #fff; }
+    .service-features { list-style: none; margin-bottom: 22px; font-size: 0.85rem; color: var(--text-muted); }
+    .service-features li { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .service-features svg { color: var(--primary); }
+
+    .google-section { padding: 100px 0; background: var(--bg-alt); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
+    .google-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px; }
+    .google-card { background: rgba(13, 20, 33, 0.85); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: var(--radius-lg); padding: 28px; }
+    .google-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .google-icon-box { width: 44px; height: 44px; border-radius: 10px; background: rgba(66, 133, 244, 0.12); border: 1px solid rgba(66, 133, 244, 0.25); color: #60a5fa; display: flex; align-items: center; justify-content: center; }
+
+    .reviews-section { padding: 90px 0; }
+    .reviews-summary { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .reviewer-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .reviewer-avatar { width: 46px; height: 46px; border-radius: 50%; background: #1e293b; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary); border: 1px solid var(--border); }
+    .review-text { font-size: 0.92rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 16px; font-style: italic; }
+
+    .about-section { padding: 90px 0; background: var(--bg-alt); }
+    .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; align-items: center; }
+    .about-image-wrap { border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border); }
+    .about-image-wrap img { width: 100%; height: 480px; object-fit: cover; }
+    .doctor-credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-subtle); }
+
+    .gallery-section { padding: 90px 0; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .gallery-item { border-radius: var(--radius-md); overflow: hidden; height: 220px; border: 1px solid var(--border-subtle); position: relative; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-caption { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(8, 12, 20, 0.95) 100%); display: flex; align-items: flex-end; padding: 16px; font-size: 0.85rem; font-weight: 600; color: #fff; }
+
+    .faq-section { padding: 90px 0; background: var(--bg-alt); }
+    .faq-wrap { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    .faq-item { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden; }
+    .faq-item.active { border-color: var(--border); background: rgba(26, 36, 54, 0.85); }
+    .faq-question { width: 100%; padding: 20px 24px; background: none; border: none; color: #fff; font-family: inherit; font-size: 1.05rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-icon { width: 24px; height: 24px; transition: transform 0.3s ease; color: var(--primary); }
+    .faq-item.active .faq-icon { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 24px; color: var(--text-muted); font-size: 0.95rem; }
+    .faq-item.active .faq-answer { max-height: 300px; padding: 0 24px 22px 24px; }
+
+    .lead-section { padding: 90px 0; }
+    .lead-box { background: linear-gradient(135deg, rgba(22, 32, 50, 0.9) 0%, rgba(13, 19, 31, 0.95) 100%); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 50px 40px; max-width: 840px; margin: 0 auto; }
+    .lead-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .form-input { width: 100%; background: rgba(8, 12, 20, 0.8); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 14px 16px; color: #fff; font-family: inherit; font-size: 0.95rem; outline: none; margin-bottom: 14px; }
+    .form-input:focus { border-color: var(--primary); }
+
+    .location-section { padding: 90px 0; background: var(--bg-alt); }
+    .location-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; }
+    .nap-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+    .nap-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(196, 154, 108, 0.12); border: 1px solid var(--border); color: var(--primary); display: flex; align-items: center; justify-content: center; }
+    .map-frame { border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border); height: 380px; }
+    .map-frame iframe { width: 100%; height: 100%; border: 0; }
+
+    .footer { background: #05080e; border-top: 1px solid var(--border-subtle); padding: 60px 0 30px 0; font-size: 0.88rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; color: var(--text-dim); }
+
+    .floating-whatsapp { position: fixed; bottom: calc(24px + env(safe-area-inset-bottom)); right: 20px; width: 56px; height: 56px; border-radius: 50%; background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45); z-index: 9999; text-decoration: none; }
+    .floating-whatsapp svg { width: 28px; height: 28px; fill: none; stroke: #fff; stroke-width: 2; }
+    .wa-pulse-ring { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #25d366; animation: waPulseRing 2s cubic-bezier(0.24, 0, 0.38, 1) infinite; pointer-events: none; }
+    @keyframes waPulseRing { 0% { transform: scale(0.9); opacity: 0.95; } 70%, 100% { transform: scale(1.65); opacity: 0; } }
+
+    @media (max-width: 900px) {
+      .hero-grid, .about-grid, .location-grid, .lead-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
   </style>
 </head>
 <body>
-  <div class="demo-bar">
+  <div class="demo-ribbon">
     <div><strong>Demonstração de Projeto</strong> • Criado pela Orizon Studio</div>
-    <a href="../#portfolio">← Voltar ao site da Orizon</a>
+    <a href="/index.html#modelos">← Voltar à Orizon Studio</a>
   </div>
-  <header class="nav">
-    <div class="brand">LUMINA <span>ESTÉTICA</span></div>
-    <a href="https://wa.me/message/E6WY3ZDGM4S6H1?text=Ol%C3%A1!%20Gostei%20do%20site%20da%20Lumina%20Est%C3%A9tica%20e%20gostaria%20de%20um%20projeto%20similar." target="_blank" class="btn" style="padding: 10px 18px; font-size: 0.88rem;">Agendar Consulta</a>
+
+  <div class="ambient-glow ambient-1"></div>
+  <div class="ambient-glow ambient-2"></div>
+
+  <header class="header">
+    <div class="container header-nav">
+      <a href="#" class="brand">
+        <div class="brand-icon">L</div>
+        <div>
+          <span class="brand-name">Lumina Estética</span>
+          <span class="brand-tag">Moema · São Paulo</span>
+        </div>
+      </a>
+      <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Lumina%20Est%C3%A9tica%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="btn btn-primary btn-sm">Agendar Consulta</a>
+    </div>
   </header>
+
   <main>
     <section class="hero">
-      <div class="badge">Biomedicina & Harmonização Facial</div>
-      <h1>Realce sua beleza natural com segurança e tecnologia</h1>
-      <p class="lead">Tratamentos faciais e corporais personalizados com acompanhamento individualizado e atendimento exclusivo.</p>
-      <a href="https://wa.me/message/E6WY3ZDGM4S6H1?text=Ol%C3%A1!%20Gostei%20do%20site%20da%20Lumina%20Est%C3%A9tica%20e%20gostaria%20de%20um%20projeto%20similar." target="_blank" class="btn">Falar no WhatsApp</a>
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge-pill">Biomedicina & Harmonização Facial em Moema · SP</div>
+          <h1 class="hero-title">Realce sua beleza com <span>naturalidade e precisão médica</span> em Moema</h1>
+          <p class="hero-desc">Procedimentos faciais e corporais sob medida, realizados por especialistas com produtos originais Anvisa. Atendimento privativo a 5 minutos do Parque Ibirapuera.</p>
+          <div class="hero-cta-group">
+            <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Lumina%20Est%C3%A9tica%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="btn btn-wa">Agendar Avaliação no WhatsApp</a>
+            <a href="#procedimentos" class="btn btn-secondary">Ver Procedimentos</a>
+          </div>
+          <div class="hero-social-proof">
+            <div class="stars">★★★★★</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);"><strong style="color: #fff;">4.9 / 5.0 no Google</strong> Mais de 320 pacientes satisfeitos</div>
+          </div>
+        </div>
+        <div class="hero-image-frame">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&auto=format&fit=crop&q=80" alt="Clínica Lumina Estética">
+        </div>
+      </div>
     </section>
-    <section class="grid">
-      <div class="card">
-        <h3>Harmonização Facial</h3>
-        <p>Preenchimento labial, malar e rinomodelação com substâncias bioabsorvíveis e resultados suaves.</p>
+
+    <!-- 03. Diferenciais -->
+    <section class="why-section" id="diferenciais">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Diferenciais</span>
+          <h2 class="section-title">Por que escolher a Lumina</h2>
+        </div>
+        <div class="why-grid">
+          <div class="card"><span class="why-number">01</span><h3 class="why-title">Avaliação 3D</h3><p>Estudamos as proporções do seu rosto para resultados discretos e harmônicos.</p></div>
+          <div class="card"><span class="why-number">02</span><h3 class="why-title">Produtos Anvisa</h3><p>Trabalhamos com marcas globais (Allergan, Galderma, Merz) lacradas na sua frente.</p></div>
+          <div class="card"><span class="why-number">03</span><h3 class="why-title">Especialistas</h3><p>Corpo biomédico pós-graduado com registro ativo no conselho de classe.</p></div>
+          <div class="card"><span class="why-number">04</span><h3 class="why-title">Valet & Conforto</h3><p>Ambiente privativo em Moema com manobrista no local e total discrição.</p></div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Bioestimuladores de Colágeno</h3>
-        <p>Recupere a firmeza, elasticidade e luminosidade da sua pele de forma progressiva e duradoura.</p>
+    </section>
+
+    <!-- 04. Serviços -->
+    <section class="services-section" id="procedimentos">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Procedimentos</span>
+          <h2 class="section-title">Tratamentos em Destaque</h2>
+        </div>
+        <div class="services-grid">
+          <div class="card service-card">
+            <div>
+              <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=80" alt="Harmonização"></div>
+              <h3 class="service-title">Harmonização Facial</h3>
+              <p class="service-desc">Preenchimento labial, malar e mandíbula com ácido hialurônico de alta pureza.</p>
+            </div>
+            <a href="https://wa.me/5511998765432?text=Harmoniza%C3%A7%C3%A3o" target="_blank" class="btn btn-primary btn-block">Saber mais</a>
+          </div>
+          <div class="card service-card">
+            <div>
+              <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1512290900672-1f5be4cb17f7?w=600&auto=format&fit=crop&q=80" alt="Bioestimuladores"></div>
+              <h3 class="service-title">Bioestimuladores</h3>
+              <p class="service-desc">Estimulação de colágeno (Radiesse e Sculptra) para firmeza e combate à flacidez.</p>
+            </div>
+            <a href="https://wa.me/5511998765432?text=Bioestimuladores" target="_blank" class="btn btn-primary btn-block">Saber mais</a>
+          </div>
+          <div class="card service-card">
+            <div>
+              <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80" alt="Botox"></div>
+              <h3 class="service-title">Toxina Botulínica</h3>
+              <p class="service-desc">Suavização de rugas e linhas da testa e pés de galinha com efeito descansado.</p>
+            </div>
+            <a href="https://wa.me/5511998765432?text=Botox" target="_blank" class="btn btn-primary btn-block">Saber mais</a>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Protocolos Corporais</h3>
-        <p>Tecnologias avançadas contra flacidez, gordura localizada e celulite com conforto e eficácia.</p>
+    </section>
+
+    <!-- 05. Google Vantagens -->
+    <section class="google-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Presença Digital</span>
+          <h2 class="section-title">Por que estar no Google faz toda a diferença</h2>
+        </div>
+        <div class="google-grid">
+          <div class="google-card"><h3>1. Busca Intencional no Celular</h3><p>Quem pesquisa no Google quer agendar hoje mesmo na sua região.</p></div>
+          <div class="google-card"><h3>2. Google Maps com Visitas</h3><p>Destaque no mapa atrai pessoas que moram ou trabalham no bairro.</p></div>
+          <div class="google-card"><h3>3. Terreno Próprio Permanente</h3><p>Site seguro e independente de quedas e bloqueios de redes sociais.</p></div>
+          <div class="google-card"><h3>4. Captação Ativa 24h</h3><p>Sua página tira dúvidas e recebe contatos mesmo com a clínica fechada.</p></div>
+          <div class="google-card"><h3>5. Tráfego Pago que Converte</h3><p>Anúncios para um site estruturado dobram os retornos no WhatsApp.</p></div>
+          <div class="google-card"><h3>6. Retorno em Dias</h3><p>O investimento se paga com apenas 1 ou 2 novos pacientes no mês.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09. FAQ -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header"><h2 class="section-title">Dúvidas Frequentes</h2></div>
+        <div class="faq-wrap">
+          <div class="faq-item active">
+            <button class="faq-question"><span>Os procedimentos doem?</span></button>
+            <div class="faq-answer"><p>Utilizamos anestésicos tópicos hospitalares e cânulas de ponta romba, garantindo conforto e processo quase indolor.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Como funciona a consulta de avaliação?</span></button>
+            <div class="faq-answer"><p>A avaliação dura 50 minutos com mapeamento facial e fotos diagnósticas. O valor é revertido como crédito no tratamento.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Localização -->
+    <section class="location-section" id="localizacao">
+      <div class="container location-grid">
+        <div class="card">
+          <h3 style="margin-bottom: 14px;">Av. Ibirapuera, 2.450 · Moema</h3>
+          <p style="margin-bottom: 20px;">Conjunto 82 · São Paulo - SP<br>Seg a Sex: 08h às 20h | Sáb: 08h às 14h</p>
+          <a href="https://maps.google.com/?q=Av.+Ibirapuera,+2450+-+Moema,+São+Paulo+-+SP" target="_blank" class="btn btn-secondary btn-block">Como Chegar no Maps</a>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d14624.960251322194!2d-46.66671844999999!3d-23.6025066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a19808a3d13%3A0x6b4f71a9a1d1d8ef!2sMoema%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1715400000000!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </div>
     </section>
   </main>
+
   <footer class="footer">
-    © 2026 Lumina Estética Avançada • Projeto Demonstrativo Orizon Studio
+    <div class="container footer-bottom">
+      <div>© 2026 Lumina Estética Avançada Ltda. · Moema, SP</div>
+      <div>Projeto criado por <a href="/index.html">Orizon Studio</a></div>
+    </div>
   </footer>
+
+  <a href="https://wa.me/5511998765432" target="_blank" class="floating-whatsapp" aria-label="WhatsApp">
+    <div class="wa-pulse-ring"></div>
+    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+  </a>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        btn.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>

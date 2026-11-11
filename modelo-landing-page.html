@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+  ==============================================================================
+  LANDING PAGE PROFISSIONAL DE ALTA CONVERSÃO PARA NEGÓCIOS LOCAIS
+  Desenvolvido por: Orizon Studio (https://www.instagram.com/orizo.nstudio/)
+  Arquivo: modelo-landing-page.html (HTML, CSS e JS unificados, 100% estático)
+
+  COMO PERSONALIZAR ESTE ARQUIVO PARA OUTRO CLIENTE:
+  Basta substituir os valores entre colchetes ou no bloco CONFIG abaixo:
+  - [NOME DO NEGÓCIO]: Lumina Estética Avançada
+  - [RAMO / ESPECIALIDADE]: Harmonização Facial & Estética Avançada
+  - [CIDADE / BAIRRO - UF]: Moema, São Paulo - SP
+  - [WHATSAPP]: 5511998765432
+  - [ENDEREÇO]: Av. Ibirapuera, 2450, cj. 82 - Moema, São Paulo - SP
+  - [HORÁRIOS]: Seg a Sex: 08h às 20h | Sáb: 08h às 14h
+  - [INSTAGRAM]: @lumina.estetica
+  ==============================================================================
+  -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- =========================================================================
+       SEO LOCAL & META TAGS
+       ========================================================================= -->
+  <title>Harmonização Facial e Estética Avançada em Moema, SP | Lumina Estética</title>
+  <meta name="description" content="Clínica de estética avançada e harmonização facial em Moema, São Paulo. Procedimentos médicos seguros com produtos originais Anvisa. Agende sua avaliação no WhatsApp!">
+  <meta name="keywords" content="estética em Moema, harmonização facial Moema, clínica estética São Paulo, bioestimulador de colágeno Moema, botox Moema SP">
+  <meta name="author" content="Lumina Estética Avançada">
+  <meta name="robots" content="index, follow">
+
+  <!-- OpenGraph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Lumina Estética Avançada">
+  <meta property="og:title" content="Harmonização Facial e Estética em Moema, SP | Lumina Estética">
+  <meta property="og:description" content="Especialistas em realçar sua beleza natural com segurança, precisão e tecnologia médica no coração de Moema.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230b0f17' stroke='%23c49a6c' stroke-width='6'/><path d='M30 65 L50 25 L70 65 Z' fill='%23c49a6c'/></svg>">
+
+  <!-- Fontes do Google (Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- =========================================================================
+       DADOS ESTRUTURADOS SCHEMA.ORG (SEO LOCAL - MedicalBusiness / LocalBusiness)
+       ========================================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Lumina Estética Avançada",
+    "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200",
+    "@id": "https://www.luminaestetica.com.br",
+    "url": "https://www.luminaestetica.com.br",
+    "telephone": "+55-11-99876-5432",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Ibirapuera, 2450, Conjunto 82",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "04028-002",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.6025,
+      "longitude": -46.6622
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/lumina.estetica"
+    ]
+  }
+  </script>
+
+  <!-- =========================================================================
+       ESPAÇO RESERVADO PARA RASTREAMENTO (META PIXEL & GOOGLE ANALYTICS)
+       Para ativar no cliente real, basta descomentar e substituir os IDs
+       ========================================================================= -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+  </script>
+  -->
+
+  <style>
+    /* ==========================================================================
+       RESET E VARIÁVEIS DE DESIGN SYSTEM (Estilo Escuro, Elegante & Ouro Nobre)
+       ========================================================================== */
+    :root {
+      --bg: #080c14;
+      --bg-alt: #0d131f;
+      --surface: rgba(18, 25, 38, 0.75);
+      --surface-hover: rgba(26, 36, 54, 0.9);
+      --border: rgba(196, 154, 108, 0.22);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --primary: #c49a6c;
+      --primary-hover: #d5ab7d;
+      --primary-glow: rgba(196, 154, 108, 0.35);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --wa-green: #25d366;
+      --wa-hover: #22bf5b;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      --container: 1180px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Barra demonstrativa superior (quando exibida como modelo) */
+    .demo-ribbon {
+      background: linear-gradient(90deg, #0e1726, #162238);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 1001;
+    }
+    .demo-ribbon strong {
+      color: var(--primary);
+    }
+    .demo-ribbon a {
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: var(--transition);
+    }
+    .demo-ribbon a:hover {
+      text-decoration: underline;
+      color: #93c5fd;
+    }
+
+    /* Efeitos de Iluminação Ambiente */
+    .ambient-glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--primary-glow) 0%, rgba(196,154,108,0) 70%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.28;
+    }
+    .ambient-1 { top: -100px; right: -100px; }
+    .ambient-2 { bottom: 15%; left: -150px; }
+
+    /* Container Central */
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Tipografia Básica */
+    h1, h2, h3, h4 {
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+    p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Badges e Kickers Sem Pílulas Espalhafatosas */
+    .kicker {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    /* Cabeçalho de Seções */
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px auto;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 14px;
+    }
+    .section-desc {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* Botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 14px 26px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #c49a6c 0%, #ad8255 100%);
+      color: #080c14;
+      box-shadow: 0 4px 18px rgba(196, 154, 108, 0.35);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #d5ab7d 0%, #c49a6c 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(196, 154, 108, 0.5);
+    }
+    .btn-wa {
+      background: #25d366;
+      color: #ffffff;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+    }
+    .btn-wa:hover {
+      background: #20ba5a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      border-color: var(--border-subtle);
+      backdrop-filter: blur(8px);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    .btn-sm {
+      padding: 10px 18px;
+      font-size: 0.85rem;
+    }
+    .btn-block {
+      width: 100%;
+    }
+
+    /* Cards Gerais com Vidro e Borda Suave */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      backdrop-filter: blur(14px);
+      transition: var(--transition);
+      position: relative;
+    }
+    .card:hover {
+      border-color: var(--border);
+      background: var(--surface-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ==========================================================================
+       01. TOP BAR / MENU FIXO
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: rgba(8, 12, 20, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary) 0%, #8c6439 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #080c14;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .brand-tag {
+      font-size: 0.7rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .nav-link:hover {
+      color: #fff;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      color: #fff;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    /* Menu Mobile */
+    .mobile-menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 12, 20, 0.96);
+      z-index: 999;
+      padding: 100px 24px 30px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .mobile-menu-overlay.open {
+      display: flex;
+    }
+    .mobile-nav-link {
+      font-size: 1.2rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       02. HERO SECTION
+       ========================================================================== */
+    .hero {
+      padding: 70px 0 80px 0;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .hero-content {
+      max-width: 620px;
+    }
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(196, 154, 108, 0.12);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero-badge-pill svg {
+      color: var(--primary);
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, #ffffff 30%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 1.12rem;
+      line-height: 1.65;
+      margin-bottom: 34px;
+      color: var(--text-muted);
+    }
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .google-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .google-icon-svg {
+      width: 24px;
+      height: 24px;
+    }
+    .stars {
+      color: #f59e0b;
+      display: flex;
+      gap: 2px;
+    }
+    .proof-text {
+      font-size: 0.82rem;
+      line-height: 1.3;
+      color: var(--text-muted);
+    }
+    .proof-text strong {
+      color: #fff;
+      display: block;
+    }
+
+    /* Imagem Hero / Card Interativo */
+    .hero-visual {
+      position: relative;
+    }
+    .hero-image-frame {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+      background: var(--bg-alt);
+    }
+    .hero-image-frame img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .hero-image-frame:hover img {
+      transform: scale(1.03);
+    }
+    .hero-floating-card {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: rgba(13, 19, 31, 0.9);
+      border: 1px solid var(--border);
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .card-icon-accent {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(196, 154, 108, 0.15);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+
+    /* ==========================================================================
+       03. SEÇÃO DIFERENCIAIS ("Por que escolher a Lumina")
+       ========================================================================== */
+    .why-section {
+      padding: 90px 0;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 50%, var(--bg) 100%);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .why-card {
+      padding: 32px 28px;
+    }
+    .why-number {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: block;
+      letter-spacing: 0.05em;
+    }
+    .why-title {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .why-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       04. SEÇÃO DE SERVIÇOS & PROCEDIMENTOS
+       ========================================================================== */
+    .services-section {
+      padding: 90px 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 26px;
+    }
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .service-img-wrap {
+      height: 200px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 22px;
+      position: relative;
+      border: 1px solid var(--border-subtle);
+    }
+    .service-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover .service-img-wrap img {
+      transform: scale(1.06);
+    }
+    .service-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(8, 12, 20, 0.85);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .service-title {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .service-desc {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 20px;
+      color: var(--text-muted);
+      flex-grow: 1;
+    }
+    .service-features {
+      list-style: none;
+      margin-bottom: 22px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .service-features li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .service-features svg {
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       05. SEÇÃO EXTRA OBRIGATÓRIA: POR QUE ESTAR NO GOOGLE FAZ DIFERENÇA
+       ========================================================================== */
+    .google-section {
+      padding: 100px 0;
+      background: radial-gradient(ellipse at center, rgba(30, 58, 138, 0.15) 0%, transparent 70%), var(--bg-alt);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+    .google-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .google-card {
+      background: rgba(13, 20, 33, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .google-card:hover {
+      border-color: rgba(96, 165, 250, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+    }
+    .google-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .google-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(66, 133, 244, 0.12);
+      border: 1px solid rgba(66, 133, 244, 0.25);
+      color: #60a5fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .google-card-title {
+      font-size: 1.12rem;
+      color: #fff;
+    }
+    .google-card-desc {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       06. DEPOIMENTOS E AVALIAÇÕES GOOGLE MEU NEGÓCIO
+       ========================================================================== */
+    .reviews-section {
+      padding: 90px 0;
+    }
+    .reviews-summary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .summary-score {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .score-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .review-card {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .reviewer-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .reviewer-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+    .reviewer-name {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .reviewer-badge {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+    .review-text {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .review-date {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ==========================================================================
+       07. EQUIPE E HISTÓRIA
+       ========================================================================== */
+    .about-section {
+      padding: 90px 0;
+      background: var(--bg-alt);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .about-image-wrap {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+    .about-image-wrap img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .about-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 18px;
+    }
+    .about-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .doctor-credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .credential-item strong {
+      display: block;
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+    .credential-item span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       08. GALERIA DE FOTOS DO ESPAÇO E TECNOLOGIA
+       ========================================================================== */
+    .gallery-section {
+      padding: 90px 0;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      height: 220px;
+      border: 1px solid var(--border-subtle);
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+    .gallery-caption {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(8, 12, 20, 0.95) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    /* ==========================================================================
+       09. PERGUNTAS FREQUENTES (FAQ ACCORDION)
+       ========================================================================== */
+    .faq-section {
+      padding: 90px 0;
+      background: var(--bg-alt);
+    }
+    .faq-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item.active {
+      border-color: var(--border);
+      background: rgba(26, 36, 54, 0.85);
+    }
+    .faq-question {
+      width: 100%;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 24px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 0 24px 22px 24px;
+    }
+
+    /* ==========================================================================
+       10. FORMULÁRIO DE CAPTAÇÃO RÁPIDA
+       ========================================================================== */
+    .lead-section {
+      padding: 90px 0;
+      position: relative;
+    }
+    .lead-box {
+      background: linear-gradient(135deg, rgba(22, 32, 50, 0.9) 0%, rgba(13, 19, 31, 0.95) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 50px 40px;
+      max-width: 840px;
+      margin: 0 auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .lead-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    .lead-info p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .lead-benefit {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .lead-benefit svg {
+      color: var(--primary);
+    }
+    .lead-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .form-input {
+      width: 100%;
+      background: rgba(8, 12, 20, 0.8);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      outline: none;
+    }
+    .form-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 12px var(--primary-glow);
+    }
+    .form-help {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       11. LOCALIZAÇÃO E MAPA GOOGLE
+       ========================================================================== */
+    .location-section {
+      padding: 90px 0;
+      background: var(--bg-alt);
+    }
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .location-card {
+      padding: 36px;
+    }
+    .nap-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .nap-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(196, 154, 108, 0.12);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .nap-content strong {
+      display: block;
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+    .nap-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .map-frame {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 380px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ==========================================================================
+       12. RODAPÉ INSTITUCIONAL (NAP & CRBM)
+       ========================================================================== */
+    .footer {
+      background: #05080e;
+      border-top: 1px solid var(--border-subtle);
+      padding: 60px 0 30px 0;
+      font-size: 0.88rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .footer-links a:hover {
+      color: #fff;
+    }
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+    .footer-bottom a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* ==========================================================================
+       13. BOTÃO FLUTUANTE DE WHATSAPP (56px, Círculo, Pulso Contínuo)
+       ========================================================================== */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: calc(24px + env(safe-area-inset-bottom));
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    }
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.65);
+    }
+    .floating-whatsapp svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 2;
+    }
+    .wa-pulse-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid #25d366;
+      animation: waPulseRing 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+      pointer-events: none;
+    }
+    @keyframes waPulseRing {
+      0% { transform: scale(0.9); opacity: 0.95; }
+      70%, 100% { transform: scale(1.65); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wa-pulse-ring { animation: none !important; display: none !important; }
+    }
+
+    /* ==========================================================================
+       RESPONSIVIDADE E MOBILE-FIRST
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .hero-grid, .about-grid, .location-grid, .lead-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .nav-links, .header-cta {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.7rem;
+      }
+      .lead-box {
+        padding: 30px 20px;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .doctor-credentials {
+        grid-template-columns: 1fr;
+      }
+      .reviews-summary {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra Informativa de Demonstração (Orizon Studio) -->
+  <div class="demo-ribbon">
+    <div><strong>Modelo de Landing Page Profissional</strong> • Caso de Referência: Clínica Estética & Saúde</div>
+    <a href="/index.html#modelos">← Voltar à Orizon Studio</a>
+  </div>
+
+  <!-- Iluminação Ambiente Decorativa -->
+  <div class="ambient-glow ambient-1"></div>
+  <div class="ambient-glow ambient-2"></div>
+
+  <!-- ========================================================================
+       01. TOP BAR / MENU FIXO
+       ======================================================================== -->
+  <header class="header">
+    <div class="container header-nav">
+      <a href="#" class="brand">
+        <div class="brand-icon">L</div>
+        <div class="brand-text">
+          <span class="brand-name">Lumina Estética</span>
+          <span class="brand-tag">Moema · São Paulo</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#diferenciais" class="nav-link">Por que a Lumina</a></li>
+          <li><a href="#procedimentos" class="nav-link">Procedimentos</a></li>
+          <li><a href="#google-vantagens" class="nav-link">Presença no Google</a></li>
+          <li><a href="#depoimentos" class="nav-link">Avaliações</a></li>
+          <li><a href="#sobre" class="nav-link">A Clínica</a></li>
+          <li><a href="#localizacao" class="nav-link">Como Chegar</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Lumina%20Est%C3%A9tica%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-cta">
+          Agendar Consulta
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay Menu Mobile -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <a href="#diferenciais" class="mobile-nav-link" onclick="closeMenu()">Por que a Lumina</a>
+    <a href="#procedimentos" class="mobile-nav-link" onclick="closeMenu()">Procedimentos</a>
+    <a href="#google-vantagens" class="mobile-nav-link" onclick="closeMenu()">Presença no Google</a>
+    <a href="#depoimentos" class="mobile-nav-link" onclick="closeMenu()">Avaliações</a>
+    <a href="#sobre" class="mobile-nav-link" onclick="closeMenu()">A Clínica</a>
+    <a href="#faq" class="mobile-nav-link" onclick="closeMenu()">Dúvidas Frequentes</a>
+    <a href="#localizacao" class="mobile-nav-link" onclick="closeMenu()">Como Chegar</a>
+    <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Lumina%20Est%C3%A9tica%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="btn btn-wa btn-block" style="margin-top: 10px;">
+      Falar no WhatsApp
+    </a>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         02. HERO SECTION COM SERVIÇO, CIDADE/BAIRRO E AÇÃO PRINCIPAL
+         ====================================================================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            Biomedicina & Harmonização Facial em Moema · SP
+          </div>
+          <h1 class="hero-title">
+            Realce sua beleza com <span>naturalidade e precisão médica</span> em Moema
+          </h1>
+          <p class="hero-desc">
+            Tratamentos faciais e corporais sob medida, realizados por especialistas com produtos originais e certificados pela Anvisa. Atendimento privativo e exclusivo a 5 minutos do Parque Ibirapuera.
+          </p>
+          <div class="hero-cta-group">
+            <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Lumina%20Est%C3%A9tica%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn btn-wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              Agendar Avaliação no WhatsApp
+            </a>
+            <a href="#procedimentos" class="btn btn-secondary">
+              Ver Procedimentos
+            </a>
+          </div>
+          <div class="hero-social-proof">
+            <div class="google-badge">
+              <svg class="google-icon-svg" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+              <div>
+                <div class="stars">★★★★★</div>
+                <div class="proof-text">
+                  <strong>4.9 / 5.0 no Google</strong>
+                  Mais de 320 pacientes satisfeitos
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img 
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&auto=format&fit=crop&q=80" 
+              alt="Ambiente sofisticado da Clínica Lumina Estética em Moema"
+              loading="lazy"
+            />
+            <div class="hero-floating-card">
+              <div class="card-icon-accent">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <strong style="color: #fff; font-size: 0.9rem; display: block;">Protocolos Certificados</strong>
+                <span style="color: var(--text-muted); font-size: 0.78rem;">Produtos com lote & selo Anvisa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         03. SEÇÃO "POR QUE ESCOLHER A LUMINA" (4 A 6 DIFERENCIAIS)
+         ====================================================================== -->
+    <section class="why-section" id="diferenciais">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Diferenciais de Excelência</span>
+          <h2 class="section-title">Por que escolher a Lumina Estética</h2>
+          <p class="section-desc">
+            Nosso compromisso é unir ciência médica, bom gosto e biossegurança rigorosa para valorizar a sua essência sem exageros artificiais.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <!-- Diferencial 1 -->
+          <div class="card why-card">
+            <span class="why-number">01 // INDIVIDUALIDADE</span>
+            <h3 class="why-title">Avaliação Facial 3D Personalizada</h3>
+            <p class="why-text">
+              Não aplicamos receitas prontas. Estudamos as proporções ósseas e musculares do seu rosto para planejar intervenções discretas e harmônicas.
+            </p>
+          </div>
+
+          <!-- Diferencial 2 -->
+          <div class="card why-card">
+            <span class="why-number">02 // SEGURANÇA MÁXIMA</span>
+            <h3 class="why-title">Produtos 100% Originais com Anvisa</h3>
+            <p class="why-text">
+              Trabalhamos exclusivamente com as marcas líderes mundiais (Allergan, Galderma, Merz). Você confere e abre a embalagem lacrada na hora.
+            </p>
+          </div>
+
+          <!-- Diferencial 3 -->
+          <div class="card why-card">
+            <span class="why-number">03 // CORPO CLÍNICO</span>
+            <h3 class="why-title">Profissionais Especialistas</h3>
+            <p class="why-text">
+              Equipe biomédica com títulos de pós-graduação nas melhores instituições do país e participação contínua em congressos internacionais.
+            </p>
+          </div>
+
+          <!-- Diferencial 4 -->
+          <div class="card why-card">
+            <span class="why-number">04 // PRIVACIDADE</span>
+            <h3 class="why-title">Ambiente Discreto com Estacionamento</h3>
+            <p class="why-text">
+              Localização nobre em Moema com serviço de valet, entrada privativa e consultórios com isolamento acústico para seu conforto absoluto.
+            </p>
+          </div>
+
+          <!-- Diferencial 5 -->
+          <div class="card why-card">
+            <span class="why-number">05 // CUIDADO COMPLETO</span>
+            <h3 class="why-title">Acompanhamento e Retorno Incluso</h3>
+            <p class="why-text">
+              Seu tratamento não termina na aplicação. Realizamos consulta de revisão em 15 a 21 dias para assegurar a perfeição do resultado final.
+            </p>
+          </div>
+
+          <!-- Diferencial 6 -->
+          <div class="card why-card">
+            <span class="why-number">06 // TECNOLOGIA</span>
+            <h3 class="why-title">Recuperação Acelerada</h3>
+            <p class="why-text">
+              Uso de cânulas ultrafinas de ponta romba que diminuem drasticamente edemas e hematomas, permitindo retorno rápido à sua rotina social.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         04. SERVIÇOS OU PRODUTOS COM BOTÃO DE CONTATO EM CADA UM
+         ====================================================================== -->
+    <section class="services-section" id="procedimentos">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Procedimentos em Destaque</span>
+          <h2 class="section-title">Soluções estéticas avançadas sob medida</h2>
+          <p class="section-desc">
+            Tratamentos minimamente invasivos focados em rejuvenescimento, sustentação e harmonia facial com máxima naturalidade.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Serviço 1: Harmonização Facial -->
+          <div class="card service-card">
+            <div>
+              <div class="service-img-wrap">
+                <span class="service-tag">Mais Procurado</span>
+                <img 
+                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=80" 
+                  alt="Harmonização Facial em Moema" 
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="service-title">Harmonização Facial Completa</h3>
+              <p class="service-desc">
+                Restauração de volume e contorno através de ácido hialurônico de alta pureza em pontos estratégicos como queixo, mandíbula, malar e olheiras.
+              </p>
+              <ul class="service-features">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Preenchimento labial sutil e volumização</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Definição da linha da mandíbula e mento</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Efeito lifting imediato sem cirurgia</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20valores%20sobre%20Harmoniza%C3%A7%C3%A3o%20Facial." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+              Saber mais sobre Harmonização
+            </a>
+          </div>
+
+          <!-- Serviço 2: Bioestimuladores de Colágeno -->
+          <div class="card service-card">
+            <div>
+              <div class="service-img-wrap">
+                <span class="service-tag">Rejuvenescimento</span>
+                <img 
+                  src="https://images.unsplash.com/photo-1512290900672-1f5be4cb17f7?w=600&auto=format&fit=crop&q=80" 
+                  alt="Bioestimuladores de Colágeno em Moema" 
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="service-title">Bioestimuladores de Colágeno</h3>
+              <p class="service-desc">
+                Estimulação profunda da produção natural de colágeno pelo próprio organismo (Radiesse, Sculptra e Elleva). Firmeza progressiva e duradoura.
+              </p>
+              <ul class="service-features">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Tratamento eficaz da flacidez facial e do pescoço</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Melhora da textura e viço da pele</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Resultados que duram até 24 meses</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Bioestimuladores%20de%20Col%C3%A1geno." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+              Saber mais sobre Bioestimuladores
+            </a>
+          </div>
+
+          <!-- Serviço 3: Toxina Botulínica (Botox) -->
+          <div class="card service-card">
+            <div>
+              <div class="service-img-wrap">
+                <span class="service-tag">Linhas de Expressão</span>
+                <img 
+                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80" 
+                  alt="Aplicação de Botox em Moema" 
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="service-title">Toxina Botulínica Preventiva</h3>
+              <p class="service-desc">
+                Suavização das rugas dinâmicas da testa, glabela (entre as sobrancelhas) e pés de galinha, mantendo sua expressividade natural e descansada.
+              </p>
+              <ul class="service-features">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Olhar descansado e jovial sem efeito congelado</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Prevenção de rugas estáticas profundas</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Aplicação rápida em cerca de 30 minutos</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aplica%C3%A7%C3%A3o%20de%20Toxina%20Botul%C3%ADnica." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+              Saber mais sobre Toxina Botulínica
+            </a>
+          </div>
+
+          <!-- Serviço 4: Protocolos Corporais & Tecnologias -->
+          <div class="card service-card">
+            <div>
+              <div class="service-img-wrap">
+                <span class="service-tag">Alta Tecnologia</span>
+                <img 
+                  src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&auto=format&fit=crop&q=80" 
+                  alt="Tecnologias e protocolos corporais em Moema" 
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="service-title">Protocolos Corporais Avançados</h3>
+              <p class="service-desc">
+                Combinação de ultrassom microfocado (Ultraformer MPT), radiofrequência e bioestimuladores corporais para definição e combate à flacidez.
+              </p>
+              <ul class="service-features">
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Tratamento de glúteos, abdômen e braços</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Protocolos personalizados para queima de gordura</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Sessões confortáveis com acompanhamento</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20protocolos%20corporais." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+              Saber mais sobre Protocolos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         05. SEÇÃO EXTRA OBRIGATÓRIA: POR QUE ESTAR NO GOOGLE FAZ DIFERENÇA
+         ====================================================================== -->
+    <section class="google-section" id="google-vantagens">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Autoridade e Presença Digital</span>
+          <h2 class="section-title">Por que estar no Google faz toda a diferença para o seu negócio</h2>
+          <p class="section-desc">
+            Enquanto as redes sociais mostram conteúdo para quem está apenas se distraindo, o Google conecta sua clínica diretamente a quem já tomou a decisão e quer agendar agora.
+          </p>
+        </div>
+
+        <div class="google-grid">
+          <!-- Argumento 1 -->
+          <div class="google-card">
+            <div class="google-card-header">
+              <div class="google-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
+              <h3 class="google-card-title">Busca Ativa no Celular</h3>
+            </div>
+            <p class="google-card-desc">
+              Mais de 85% dos pacientes buscam clínicas pelo Google diretamente no smartphone quando precisam de um procedimento. Quem não está na primeira página simplesmente é invisível para esse público qualificado.
+            </p>
+          </div>
+
+          <!-- Argumento 2 -->
+          <div class="google-card">
+            <div class="google-card-header">
+              <div class="google-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+              </div>
+              <h3 class="google-card-title">Google Maps Atrai Pacientes Locais</h3>
+            </div>
+            <p class="google-card-desc">
+              Aparecer com destaque no mapa da sua região gera ligações imediatas, pedidos de rotas e visitas espontâneas de pessoas que moram ou trabalham a poucos metros do seu consultório.
+            </p>
+          </div>
+
+          <!-- Argumento 3 -->
+          <div class="google-card">
+            <div class="google-card-header">
+              <div class="google-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3 class="google-card-title">Terreno Próprio e Permanente</h3>
+            </div>
+            <p class="google-card-desc">
+              Redes sociais pertencem a terceiros e sofrem com quedas de alcance, contas suspensas e mudanças repentinas de regras. Seu site é seu patrimônio definitivo, seguro e 100% sob seu controle.
+            </p>
+          </div>
+
+          <!-- Argumento 4 -->
+          <div class="google-card">
+            <div class="google-card-header">
+              <div class="google-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h3 class="google-card-title">Captação Ativa 24 Horas por Dia</h3>
+            </div>
+            <p class="google-card-desc">
+              Sua clínica pode fechar à noite e aos finais de semana, mas sua página institucional continua apresentando seus serviços, tirando dúvidas e recebendo mensagens para sua secretária atender logo cedo.
+            </p>
+          </div>
+
+          <!-- Argumento 5 -->
+          <div class="google-card">
+            <div class="google-card-header">
+              <div class="google-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="google-card-title">Tráfego Pago Converte Muito Mais</h3>
+            </div>
+            <p class="google-card-desc">
+              Enviar anúncios do Google ou Instagram para um perfil solto dispersa a atenção. Com uma landing page estruturada e veloz, cada real investido gera o dobro de contatos diretos no WhatsApp.
+            </p>
+          </div>
+
+          <!-- Argumento 6 -->
+          <div class="google-card">
+            <div class="google-card-header">
+              <div class="google-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+              <h3 class="google-card-title">Retorno Rápido do Investimento</h3>
+            </div>
+            <p class="google-card-desc">
+              Diferente de despesas fixas pesadas, o investimento em um site profissional de alta conversão costuma se pagar integralmente com apenas 1 ou 2 novos pacientes conquistados no mês.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         06. DEPOIMENTOS E AVALIAÇÕES DO GOOGLE
+         ====================================================================== -->
+    <section class="reviews-section" id="depoimentos">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Opinião de Quem Confia</span>
+          <h2 class="section-title">O que dizem os nossos pacientes</h2>
+          <p class="section-desc">
+            Transparência e satisfação real refletidas em avaliações verificadas diretamente no Google Meu Negócio.
+          </p>
+        </div>
+
+        <div class="reviews-summary">
+          <div class="summary-score">
+            <div class="score-number">4.9</div>
+            <div>
+              <div class="stars" style="font-size: 1.2rem;">★★★★★</div>
+              <span style="color: var(--text-muted); font-size: 0.85rem;">Nota média baseada em 324 avaliações</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg class="google-icon-svg" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span style="color: #fff; font-weight: 700; font-size: 0.95rem;">Avaliações Verificadas pelo Google</span>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Avaliação 1 -->
+          <div class="card review-card">
+            <div>
+              <div class="reviewer-header">
+                <div class="reviewer-avatar">MS</div>
+                <div>
+                  <h4 class="reviewer-name">Mariana Silveira</h4>
+                  <span class="reviewer-badge">Paciente de Moema · Harmonização Facial</span>
+                </div>
+              </div>
+              <div class="stars" style="margin-bottom: 10px;">★★★★★</div>
+              <p class="review-text">
+                "Eu tinha muito receio de fazer harmonização e ficar artificial. A Dra. Helena teve uma sensibilidade ímpar! Ela analisou meu rosto com calma e fez apenas o que realmente valorizou meus traços. Amei o atendimento da equipe e o consultório em Moema é impecável."
+              </p>
+            </div>
+            <div class="review-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Avaliado no Google · há 2 semanas
+            </div>
+          </div>
+
+          <!-- Avaliação 2 -->
+          <div class="card review-card">
+            <div>
+              <div class="reviewer-header">
+                <div class="reviewer-avatar">RC</div>
+                <div>
+                  <h4 class="reviewer-name">Dr. Ricardo Castilho</h4>
+                  <span class="reviewer-badge">Paciente de São Paulo · Bioestimuladores</span>
+                </div>
+              </div>
+              <div class="stars" style="margin-bottom: 10px;">★★★★★</div>
+              <p class="review-text">
+                "Como médico, sou extremamente criterioso com biossegurança e comprovação científica. Na Lumina encontrei profissionais de altíssimo nível técnico. Fiz o protocolo de Radiesse e a melhora na firmeza da pele foi visível sem alterar minha fisionomia."
+              </p>
+            </div>
+            <div class="review-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Avaliado no Google · há 1 mês
+            </div>
+          </div>
+
+          <!-- Avaliação 3 -->
+          <div class="card review-card">
+            <div>
+              <div class="reviewer-header">
+                <div class="reviewer-avatar">PM</div>
+                <div>
+                  <h4 class="reviewer-name">Patrícia Mendes</h4>
+                  <span class="reviewer-badge">Paciente da Vila Nova Conceição · Botox e Olheiras</span>
+                </div>
+              </div>
+              <div class="stars" style="margin-bottom: 10px;">★★★★★</div>
+              <p class="review-text">
+                "Tratamento com atendimento pontual, estacionamento com manobrista facilitado e um pós-atendimento que nunca vi igual. Fizeram contato após 3 dias para saber como eu estava e no retorno ajustaram tudo com carinho. Recomendo de olhos fechados!"
+              </p>
+            </div>
+            <div class="review-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Avaliado no Google · há 3 semanas
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         07. SEÇÃO SOBRE A EQUIPE E A HISTÓRIA DO NEGÓCIO
+         ====================================================================== -->
+    <section class="about-section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-image-wrap">
+          <img 
+            src="https://images.unsplash.com/photo-1594824813511-66236b328151?w=800&auto=format&fit=crop&q=80" 
+            alt="Dra. Helena Duarte, Responsável Técnica da Lumina Estética" 
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <span class="kicker">Ciência & Autoridade</span>
+          <h2 class="about-title">A união da precisão biomédica com a arte de cuidar</h2>
+          <p class="about-text">
+            Fundada em Moema pela <strong>Dra. Helena Duarte</strong>, a Lumina Estética Avançada nasceu com a premissa de desmistificar a estética padronizada. Acreditamos que o melhor procedimento é aquele que ninguém percebe que você fez — apenas notam que você está mais descansada e radiante.
+          </p>
+          <p class="about-text">
+            Nossa estrutura foi planejada com consultórios individuais, filtragem de ar hospitalar, sala de recuperação térmica e equipamentos de ultrassom diagnóstico para mapeamento vascular antes de qualquer injeção, reduzindo riscos a níveis mínimos.
+          </p>
+
+          <div class="doctor-credentials">
+            <div class="credential-item">
+              <strong>Dra. Helena Duarte</strong>
+              <span>Biomédica Esteta · CRBM 14.892</span>
+            </div>
+            <div class="credential-item">
+              <strong>Membro da ABBM</strong>
+              <span>Associação Brasileira de Biomedicina</span>
+            </div>
+            <div class="credential-item">
+              <strong>+8 Anos de Experiência</strong>
+              <span>Dedicação exclusiva à harmonização</span>
+            </div>
+            <div class="credential-item">
+              <strong>Certificações Globais</strong>
+              <span>Workshops em Paris, Miami e SP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         08. GALERIA DE FOTOS DO LOCAL E TRABALHOS
+         ====================================================================== -->
+    <section class="gallery-section" id="galeria">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Nosso Espaço</span>
+          <h2 class="section-title">Ambiente acolhedor e tecnologia hospitalar</h2>
+          <p class="section-desc">
+            Cada detalhe da clínica foi projetado para oferecer uma experiência de spa aliada à máxima segurança biomédica.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=600&auto=format&fit=crop&q=80" alt="Recepção moderna e elegante" loading="lazy">
+            <div class="gallery-caption">Recepção Privativa</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&auto=format&fit=crop&q=80" alt="Consultório clínico de procedimentos" loading="lazy">
+            <div class="gallery-caption">Sala de Procedimentos</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&auto=format&fit=crop&q=80" alt="Equipamentos esterilizados de precisão" loading="lazy">
+            <div class="gallery-caption">Biossegurança e Esterilização</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=600&auto=format&fit=crop&q=80" alt="Sala de avaliação e mapeamento 3D" loading="lazy">
+            <div class="gallery-caption">Espaço de Avaliação 3D</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         09. PERGUNTAS FREQUENTES (FAQ ADEQUADO AO RAMO)
+         ====================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Tire Suas Dúvidas</span>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-desc">
+            Reunimos as respostas para as principais dúvidas de quem planeja realizar um procedimento conosco.
+          </p>
+        </div>
+
+        <div class="faq-wrap">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Os procedimentos de harmonização e preenchimento são dolorosos?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Não. Utilizamos anestésicos tópicos hospitalares de alta eficácia e os próprios produtos aplicados já contêm lidocaína na fórmula. Além disso, utilizamos cânulas de ponta romba em vez de agulhas tradicionais, o que torna o processo muito suave e praticamente indolor.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como funciona a consulta de avaliação e quais são os valores?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                A avaliação dura cerca de 50 minutos. Nela, realizamos o mapeamento facial, fotos diagnósticas e alinhamos suas expectativas. Caso você decida realizar o procedimento, o valor da avaliação é revertido como crédito no tratamento. Os valores detalhados de cada produto são apresentados de forma 100% transparente no seu plano individual.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Quais são as formas de pagamento disponíveis?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Aceitamos cartões de crédito (parcelamento em até 10x ou 12x conforme o protocolo), PIX com condição especial à vista e transferências bancárias. Emitimos nota fiscal médica/biomédica de todos os procedimentos para sua prestação de contas.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Qual é o tempo de recuperação e quanto tempo dura o resultado?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Na maioria dos procedimentos injetáveis, você pode voltar ao trabalho imediatamente após sair da clínica, evitando apenas exercícios físicos intensos nas primeiras 24 horas. A toxina botulínica dura entre 4 e 6 meses, enquanto preenchedores e bioestimuladores mantêm seus benefícios por 12 a 24 meses.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Posso agendar no mesmo dia ou aos sábados?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Atendemos de segunda a sexta das 08h às 20h e aos sábados das 08h às 14h. Em virtude da agenda privativa (atendemos apenas um paciente por horário), recomendamos agendar com pelo menos 2 a 3 dias de antecedência pelo nosso canal oficial de WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. FORMULÁRIO DE CAPTAÇÃO RÁPIDA (COM RETORNO EM MENOS DE 15 MIN)
+         ====================================================================== -->
+    <section class="lead-section" id="contato">
+      <div class="container">
+        <div class="lead-box">
+          <div class="lead-grid">
+            <div class="lead-info">
+              <span class="kicker">Atendimento Ágil</span>
+              <h3>Agende sua avaliação com nossa concierge</h3>
+              <p>
+                Deixe seu nome e WhatsApp. Nossa equipe médica entrará em contato em menos de 15 minutos (em horário comercial) para esclarecer dúvidas e reservar seu melhor horário.
+              </p>
+              <div class="lead-benefit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Atendimento discreto e sem compromisso</span>
+              </div>
+              <div class="lead-benefit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Estacionamento com manobrista cortesia</span>
+              </div>
+            </div>
+
+            <form class="lead-form" id="leadForm" onsubmit="handleLeadSubmit(event)">
+              <div class="form-group">
+                <label for="leadName" class="form-label">Seu Nome Completo</label>
+                <input type="text" id="leadName" class="form-input" placeholder="Ex: Camila Ferreira" required>
+              </div>
+
+              <div class="form-group">
+                <label for="leadPhone" class="form-label">WhatsApp (com DDD)</label>
+                <input type="tel" id="leadPhone" class="form-input" placeholder="(11) 99999-8888" required>
+              </div>
+
+              <div class="form-group">
+                <label for="leadProcedure" class="form-label">Procedimento de Maior Interesse</label>
+                <select id="leadProcedure" class="form-input" style="cursor: pointer;">
+                  <option value="Harmonização Facial">Harmonização Facial</option>
+                  <option value="Bioestimuladores de Colágeno">Bioestimuladores de Colágeno</option>
+                  <option value="Toxina Botulínica (Botox)">Toxina Botulínica (Botox)</option>
+                  <option value="Protocolos Corporais">Protocolos Corporais</option>
+                  <option value="Ainda não sei, quero avaliação">Quero uma avaliação completa</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                Receber Atendimento no WhatsApp
+              </button>
+              <span class="form-help">🔒 Seus dados são protegidos pela LGPD. Não enviamos spam.</span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         11. LOCALIZAÇÃO COM MAPA GOOGLE INCORPORADO E BOTÃO "COMO CHEGAR"
+         ====================================================================== -->
+    <section class="location-section" id="localizacao">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">Fácil Acesso em Moema</span>
+          <h2 class="section-title">Localização Privilegiada</h2>
+          <p class="section-desc">
+            Instalada em um dos pontos mais nobres e seguros de São Paulo, a poucos minutos do Parque Ibirapuera e da Estação Moema do Metrô.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <div class="card location-card">
+            <!-- Endereço -->
+            <div class="nap-item">
+              <div class="nap-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="nap-content">
+                <strong>Endereço Completo</strong>
+                <p>Av. Ibirapuera, 2.450, Conjunto 82<br>Moema · São Paulo - SP, CEP 04028-002</p>
+              </div>
+            </div>
+
+            <!-- Horários -->
+            <div class="nap-item">
+              <div class="nap-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="nap-content">
+                <strong>Horário de Funcionamento</strong>
+                <p>Segunda a Sexta: 08:00 às 20:00<br>Sábados: 08:00 às 14:00 (com hora marcada)</p>
+              </div>
+            </div>
+
+            <!-- Contatos -->
+            <div class="nap-item">
+              <div class="nap-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="nap-content">
+                <strong>Telefone & WhatsApp Oficial</strong>
+                <p>(11) 99876-5432 · recepcao@luminaestetica.com.br</p>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com/?q=Av.+Ibirapuera,+2450+-+Moema,+São+Paulo+-+SP" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+              Abrir Rota no Google Maps / Waze
+            </a>
+          </div>
+
+          <div class="map-frame">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d14624.960251322194!2d-46.66671844999999!3d-23.6025066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a19808a3d13%3A0x6b4f71a9a1d1d8ef!2sMoema%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1715400000000!5m2!1spt-BR!2sbr" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de Localização da Clínica Lumina em Moema"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       12. RODAPÉ INSTITUCIONAL COM NAP IDÊNTICO AO GOOGLE MEU NEGÓCIO
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom: 14px;">
+            <div class="brand-icon">L</div>
+            <div class="brand-text">
+              <span class="brand-name">Lumina Estética</span>
+              <span class="brand-tag">Moema · São Paulo</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px;">
+            Clínica dedicada à harmonização facial sutil, bioestímulo de colágeno e rejuvenescimento saudável com acompanhamento médico integral.
+          </p>
+          <p style="font-size: 0.8rem; color: var(--text-dim);">
+            Responsável Técnica: Dra. Helena Duarte · CRBM 14.892<br>
+            CNPJ: 45.123.890/0001-44
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#diferenciais">Por que a Lumina</a></li>
+            <li><a href="#procedimentos">Procedimentos Principais</a></li>
+            <li><a href="#google-vantagens">Importância no Google</a></li>
+            <li><a href="#depoimentos">Avaliações de Pacientes</a></li>
+            <li><a href="#faq">Dúvidas Frequentes</a></li>
+            <li><a href="#localizacao">Como Chegar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato & Redes</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/5511998765432" target="_blank" rel="noopener noreferrer">WhatsApp: (11) 99876-5432</a></li>
+            <li><a href="https://www.instagram.com/lumina.estetica" target="_blank" rel="noopener noreferrer">Instagram: @lumina.estetica</a></li>
+            <li><span>Email: contato@luminaestetica.com.br</span></li>
+            <li style="margin-top: 10px; color: var(--text-muted);">
+              Atendimento com agendamento prévio.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Lumina Estética Avançada Ltda. Todos os direitos reservados.
+        </div>
+        <div>
+          Projeto desenvolvido e otimizado por <a href="/index.html" target="_blank">Orizon Studio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       13. BOTÃO FLUTUANTE DE WHATSAPP (56px, Círculo Verde com Pulso Contínuo)
+       ======================================================================== -->
+  <a 
+    href="https://wa.me/5511998765432?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Lumina%20Est%C3%A9tica%20e%20gostaria%20de%20informa%C3%A7%C3%B5es." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="floating-whatsapp" 
+    aria-label="Falar no WhatsApp"
+  >
+    <div class="wa-pulse-ring"></div>
+    <svg viewBox="0 0 24 24">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
+
+  <!-- ========================================================================
+       JAVASCRIPT FUNCIONAL
+       ======================================================================== -->
+  <script>
+    // Configurações do Negócio (Centralizadas para fácil customização)
+    const BUSINESS_CONFIG = {
+      name: "Lumina Estética Avançada",
+      whatsappNumber: "5511998765432",
+      cityNeighborhood: "Moema, São Paulo - SP",
+      address: "Av. Ibirapuera, 2450, cj. 82 - Moema, São Paulo - SP",
+      instagram: "@lumina.estetica"
+    };
+
+    // Menu Mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open');
+      });
+    }
+
+    function closeMenu() {
+      if (mobileMenu) {
+        mobileMenu.classList.remove('open');
+      }
+    }
+
+    // Accordion do FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function(item) {
+      const questionBtn = item.querySelector('.faq-question');
+      questionBtn.addEventListener('click', function() {
+        const isOpen = item.classList.contains('active');
+        
+        // Fecha os demais
+        faqItems.forEach(function(other) {
+          other.classList.remove('active');
+        });
+
+        // Alterna o atual
+        if (!isOpen) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Envio do Formulário de Captação Rápida -> WhatsApp Direto
+    function handleLeadSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('leadName').value.trim();
+      const phone = document.getElementById('leadPhone').value.trim();
+      const procedure = document.getElementById('leadProcedure').value;
+
+      if (!name || !phone) {
+        alert("Por favor, preencha seu nome e WhatsApp.");
+        return;
+      }
+
+      // Dispara evento no Meta Pixel e Google Analytics se configurados
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', { content_name: procedure });
+      }
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { event_category: 'form', event_label: procedure });
+      }
+
+      // Monta mensagem codificada para o WhatsApp
+      const textMessage = encodeURIComponent(
+        `Olá! Vim pelo formulário do site.\nMeu nome é *${name}*.\nMeu WhatsApp: *${phone}*.\nTenho interesse em: *${procedure}*.\nGostaria de receber mais informações!`
+      );
+
+      const targetUrl = `https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${textMessage}`;
+      
+      // Abre a conversa do WhatsApp
+      window.open(targetUrl, '_blank');
+    }
+
+    // Máscara dinâmica de telefone no formulário
+    const phoneInput = document.getElementById('leadPhone');
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 11) value = value.slice(0, 11);
+        
+        if (value.length > 6) {
+          value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+        } else if (value.length > 2) {
+          value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+        }
+        e.target.value = value;
+      });
+    }
+  </script>
+</body>
+</html>
